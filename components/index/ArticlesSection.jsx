@@ -29,7 +29,7 @@ export default function ArticlesSection () {
   }
 
   return (
-    <div className="articles__container __flex-row">
+    <div className="articles__container">
       <Card
         className="articles__card"
         onClick={() => handleArticleCardClick(1)}
