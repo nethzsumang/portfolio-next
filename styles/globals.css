@@ -16,8 +16,7 @@ a {
 }
 
 .footer {
-  position: absolute;
-  bottom: 1px;
+  align-self: end;
   width: 100vw;
   display: flex;
   flex: 1;
@@ -31,7 +30,7 @@ a {
 }
  
 .__full-height {
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .__dark-div {

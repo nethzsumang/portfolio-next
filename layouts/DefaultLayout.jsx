@@ -59,7 +59,7 @@ export default function DefaultLayout ({ children }) {
   }
 
   return (
-    <div className={appTheme === 'dark' ? '__dark-div' : ''}>
+    <div className={appTheme === 'dark' ? 'flex h-100 __dark-div' : 'flex h-100'}>
       <Navbar bg={appTheme} variant={appTheme} expand="lg" >
         <Container>
           <Navbar.Brand href="#home">
