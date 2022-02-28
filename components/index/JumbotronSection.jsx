@@ -9,7 +9,7 @@ export default function JumbotronSection () {
 
   return (
     <div>
-      <div className="mt-4 p-5 rounded">
+      <div className="home__jumbotron">
         <h1>Kenneth Sumang</h1>
         <p>{ t('HOME.DESCRIPTION') }</p>
       </div>
