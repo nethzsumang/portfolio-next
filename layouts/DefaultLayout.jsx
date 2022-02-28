@@ -64,11 +64,19 @@ export default function DefaultLayout ({ children }) {
               
               <Nav.Link
                 href="/resume"
-                disabled={true}
                 onClick={event => navigate(event, "/resume")}
                 active={isNavActive("/resume")}
               >
                 { t('NAV.RESUME' )}
+              </Nav.Link>
+
+              <Nav.Link
+                href="/skills"
+                disabled={true}
+                onClick={event => navigate(event, "/skills")}
+                active={isNavActive("/skills")}
+              >
+                { t('NAV.SKILLS' )}
               </Nav.Link>
             </Nav>
 

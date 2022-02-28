@@ -4,6 +4,7 @@ import '../styles/globals.css';
 import store from '../store';
 import '../plugins/react-i18n';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export default function MyApp({ Component, pageProps }) {
   return (
