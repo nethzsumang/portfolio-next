@@ -10,6 +10,9 @@ export default {
       'SKILLS': '기술들',
       'LANGUAGE': '언어'
     },
+    'HOME': {
+      'DESCRIPTION': '프런트 엔드 개발 경험이 있는 Laravel 개발자.'
+    },
     'SKILLS': {
       'HEADER': '기술들',
       'SKILL_1': '회사 내부 어플리케이션까지 전자상거래 어플리케이션을 만드는 등 총 3년간의 웹 개발 경험이 있습니다.',

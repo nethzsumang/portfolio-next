@@ -10,6 +10,9 @@ export default {
       'SKILLS': 'Skills',
       'LANGUAGE': 'Language'
     },
+    'HOME': {
+      'DESCRIPTION': 'A Laravel developer with experience on front-end development.'
+    },
     'SKILLS': {
       'HEADER': 'Skills',
       'SKILL_1': 'Has a total of 3 years experience in web development, rom creating e-commerce applications to company\'s internal applications.',
