@@ -48,6 +48,11 @@ a {
     padding: 1rem;
   }
 
+  .contacts__container {
+    display: flex;
+    flex-direction: column;
+  }
+
   .articles__container {
     padding: 1rem 0 3rem 0;
     display: flex;
@@ -61,6 +66,10 @@ a {
     margin-right: 1rem;
     cursor: pointer;
   }
+
+  .resume__container {
+    padding: 3rem 3rem 0 3rem;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -71,6 +80,11 @@ a {
   .home__jumbotron {
     margin-top: 1rem;
     padding: 1rem;
+  }
+
+  .contacts__container {
+    display: flex;
+    flex-direction: row;
   }
 
   .articles__container {
@@ -84,11 +98,20 @@ a {
     margin: 0 0 0 2rem;
     cursor: pointer;
   }
+  
+  .resume__container {
+    padding: 3rem 3rem 0 3rem;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .container {
     padding: 0 2rem;
+  }
+
+  .contacts__container {
+    display: flex;
+    flex-direction: row;
   }
 
   .home__jumbotron {
@@ -107,15 +130,15 @@ a {
     margin: 0 0 0 3rem;
     cursor: pointer;
   }
+
+  .resume__container {
+    padding: 3rem 7rem 0 7rem;
+  }
 }
 
 .articles__container .articles__card .card-img-top {
   width: 100%;
   height: 210px;
-}
-
-.resume__container {
-  padding: 3rem 7rem 0 7rem;
 }
 
 .resume__icon {
