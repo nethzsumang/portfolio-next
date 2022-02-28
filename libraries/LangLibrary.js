@@ -1,4 +1,5 @@
 import enTranslation from '../i18n/en';
+import krTranslation from '../i18n/kr';
 
 /**
  * Language Library class
@@ -13,6 +14,9 @@ export default class LangLibrary {
     return {
       en: {
         translation: enTranslation.translation
+      },
+      kr: {
+        translation: krTranslation.translation
       }
     };
   }

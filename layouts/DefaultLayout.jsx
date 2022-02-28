@@ -1,9 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import Flag from 'react-world-flags';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/router';
 import DarkModeToggle from 'react-dark-mode-toggle';
-import { changeAppTheme } from '../store/slices/appSlice';
+import { changeAppTheme, changeLang } from '../store/slices/appSlice';
 
 /**
  * DefaultLayout component
@@ -11,7 +12,8 @@ import { changeAppTheme } from '../store/slices/appSlice';
  */
 export default function DefaultLayout ({ children }) {
   const appTheme = useSelector(state => state.app.appTheme);
-  const { t } = useTranslation();
+  const lang = useSelector(state => state.app.lang);
+  const { t, i18n } = useTranslation();
   const router = useRouter();
   const dispatch = useDispatch();
 
@@ -37,6 +39,20 @@ export default function DefaultLayout ({ children }) {
     dispatch(changeAppTheme(theme));
   }
 
+  /**
+   * Change language
+   * @param {string} langCode 
+   */
+  async function changeLanguageEvent(langCode) {
+    await i18n.changeLanguage(langCode);
+    dispatch(changeLang(langCode));
+  }
+
+  /**
+   * Checks if nav is active
+   * @param {string} navPath 
+   * @returns 
+   */
   function isNavActive(navPath) {
     const pathName = router.pathname;
     return navPath === pathName;
@@ -87,6 +103,24 @@ export default function DefaultLayout ({ children }) {
                 size={70}
               />
             </Nav>
+
+            <NavDropdown title={ t('NAV.LANGUAGE') } menuVariant={appTheme}>
+              <NavDropdown.Item
+                onClick={() => changeLanguageEvent("en")}
+                active={lang === "en"}
+              >
+                <Flag code="US" height={16} className="__flag-icon" />
+                English
+              </NavDropdown.Item>
+
+              <NavDropdown.Item
+                onClick={() => changeLanguageEvent("kr")}
+                active={lang === "kr"}
+              >
+                <Flag code="KR" height={20} className="__flag-icon" />
+                한국
+              </NavDropdown.Item>
+            </NavDropdown>
           </Navbar.Collapse>
         </Container>
       </Navbar>

@@ -7,7 +7,8 @@ export default {
     'NAV': {
       'HOME': 'Home',
       'RESUME': 'Resume',
-      'SKILLS': 'Skills'
+      'SKILLS': 'Skills',
+      'LANGUAGE': 'Language'
     },
     'SKILLS': {
       'HEADER': 'Skills',
@@ -23,7 +24,7 @@ export default {
       'HEADER': 'Achievements',
       'UNIVERSITY': 'University',
       'ACHIEVEMENT_1': 'Best Research Proposal (2018)',
-      'ACHIEVEMENT_2': 'Panelist’s Choice Award (2018)',
+      'ACHIEVEMENT_2': 'Panelist\’s Choice Award (2018)',
       'ACHIEVEMENT_3': 'Most Outstanding Research Paper (2018)',
       'ACHIEVEMENT_4': '1st Place: C# Programming Challenge (2017)',
       'ACHIEVEMENT_5': '3rd Place: Programming Competition (2016)',
