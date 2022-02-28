@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import NameSection from '../components/resume/NameSection';
 import ContactSection from '../components/resume/ContactSection';
+import SkillsSection from '../components/resume/SkillsSection';
+import AchievementsSection from '../components/resume/AchievementsSection';
 
 /**
  * Portfolio page
@@ -23,6 +25,8 @@ export default function Resume () {
     <div className={containerStyle}>
       <NameSection />
       <ContactSection />
+      <SkillsSection />
+      <AchievementsSection />
     </div>
   );
 }
