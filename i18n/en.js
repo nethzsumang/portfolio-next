@@ -8,7 +8,7 @@ export default {
       'HOME': 'Home',
       'RESUME': 'Resume',
       'SKILLS': 'Skills',
-      'LANGUAGE': 'Language'
+      'LANGUAGE': 'English'
     },
     'HOME': {
       'DESCRIPTION': 'A Laravel developer with experience on front-end development.'

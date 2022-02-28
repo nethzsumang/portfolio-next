@@ -8,7 +8,7 @@ export default {
       'HOME': '집',
       'RESUME': '이력서',
       'SKILLS': '기술들',
-      'LANGUAGE': '언어'
+      'LANGUAGE': '한국'
     },
     'HOME': {
       'DESCRIPTION': '프런트 엔드 개발 경험이 있는 Laravel 개발자.'
