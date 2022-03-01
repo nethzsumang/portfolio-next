@@ -5,6 +5,7 @@ import ContactSection from '../components/resume/ContactSection';
 import SkillsSection from '../components/resume/SkillsSection';
 import AchievementsSection from '../components/resume/AchievementsSection';
 import WorkExperienceSection from '../components/resume/WorkExperienceSection';
+import EducationSection from '../components/resume/EducationSection';
 
 /**
  * Portfolio page
@@ -16,9 +17,9 @@ export default function Resume () {
 
   useEffect(() => {
     if (appTheme === 'dark') {
-      setContainerStyle('resume__container __full-height __dark-div');
+      setContainerStyle('resume__container __full-height mb-5 __dark-div');
     } else {
-      setContainerStyle('resume__container __full-height');
+      setContainerStyle('resume__container __full-height mb-5');
     }
   }, [appTheme]);
 
@@ -29,6 +30,7 @@ export default function Resume () {
       <SkillsSection />
       <AchievementsSection />
       <WorkExperienceSection />
+      <EducationSection />
     </div>
   );
 }
