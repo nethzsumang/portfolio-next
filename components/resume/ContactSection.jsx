@@ -8,7 +8,7 @@ import AddressSection from './contact/AddressSection';
  */
 export default function ContactSection () {
   return (
-    <div className="__flex-row">
+    <div className="contacts__container">
       <PhoneSection />
       <EmailSection />
       <AddressSection />

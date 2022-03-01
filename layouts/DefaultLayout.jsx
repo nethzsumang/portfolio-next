@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import Flag from 'react-world-flags';
@@ -16,6 +17,16 @@ export default function DefaultLayout ({ children }) {
   const { t, i18n } = useTranslation();
   const router = useRouter();
   const dispatch = useDispatch();
+
+  useEffect(async () => {
+    if (window !== undefined) {
+      const appTheme = window.localStorage.getItem('portfolio-app-theme') ?? 'light';
+      const lang = window.localStorage.getItem('portfolio-lang') ?? 'en';
+      dispatch(changeAppTheme(appTheme));
+      dispatch(changeLang(lang));
+      await i18n.changeLanguage(lang);
+    }
+  }, []);
 
   /**
    * Navigates to a given path
@@ -36,6 +47,7 @@ export default function DefaultLayout ({ children }) {
    */
   function onChangeThemeToggle(isDark) {
     const theme = isDark ? 'dark' : 'light';
+    window.localStorage.setItem('portfolio-app-theme', theme);
     dispatch(changeAppTheme(theme));
   }
 
@@ -45,6 +57,7 @@ export default function DefaultLayout ({ children }) {
    */
   async function changeLanguageEvent(langCode) {
     await i18n.changeLanguage(langCode);
+    window.localStorage.setItem('portfolio-lang', langCode);
     dispatch(changeLang(langCode));
   }
 
@@ -59,7 +72,7 @@ export default function DefaultLayout ({ children }) {
   }
 
   return (
-    <div className={appTheme === 'dark' ? '__dark-div' : ''}>
+    <div className={appTheme === 'dark' ? 'flex h-100 __dark-div' : 'flex h-100'}>
       <Navbar bg={appTheme} variant={appTheme} expand="lg" >
         <Container>
           <Navbar.Brand href="#home">
