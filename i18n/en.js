@@ -32,6 +32,29 @@ export default {
       'ACHIEVEMENT_4': '1st Place: C# Programming Challenge (2017)',
       'ACHIEVEMENT_5': '3rd Place: Programming Competition (2016)',
       'ACHIEVEMENT_6': '1st Place: Programming Competition (2015)'
+    },
+    'WORK_EXPERIENCE': {
+      'HEADER': 'Work Experience',
+      'WORK_EXPERIENCE_1_1': 'Developed an information system that lets the employees view their schedules, file leaves and get their personal information. It also lets HR and admins edit the leave approval settings, leave generation settings, employee information and workday settings within the app. It also automatically migrates company information and department assignments via cron jobs. It also generates leave credits depending on the increment and generation setting per branch and workplace.',
+      'WORK_EXPERIENCE_1_1_1': 'Used Laravel, Vue, and MySQL.',
+      'WORK_EXPERIENCE_1_1_2': 'Led a team of web developers for its development.',
+      'WORK_EXPERIENCE_1_1_3': 'Analyzed and prepared software specifications and requirements needed for the development of this app.',
+      'WORK_EXPERIENCE_1_1_4': 'Deployed major stories and improvements to the production server.',
+      'WORK_EXPERIENCE_1_1_5': 'Created development and deployment plans for the project.',
+      'WORK_EXPERIENCE_1_1_6': 'Provided estimates for each story and improvements.',
+      'WORK_EXPERIENCE_2_1': 'Developed a rewards app based on the influencer’s fan purchases using a link provided by the app. It tracks and records user\’s checked out items, computes their total price, then gives rewards points depending on the percentage set by the mall admin.',
+      'WORK_EXPERIENCE_2_1_1': 'Used Laravel, ReactJS, REDIS, and MySQL.',
+      'WORK_EXPERIENCE_2_1_2': 'Used the company\'s OAuth 2.0 based API.',
+      'WORK_EXPERIENCE_2_1_3': 'Also used the company\'s in-house IFTTT-like API.',
+      'WORK_EXPERIENCE_2_2': 'Developed an app that lets the mall users see where the specific product can be shipped. It shows the list of the countries set by the admin for the specific product. It also gets the country code from the header of the request and issues an alert when the user\’s country is not included in the countries set by the mall admin on the product he is buying.',
+      'WORK_EXPERIENCE_2_2_1': 'Used Laravel, jQuery, and REDIS.',
+      'WORK_EXPERIENCE_2_2_2': 'Used the company\'s OAuth 2.0 based API.',
+      'WORK_EXPERIENCE_2_3': 'Developed an app that tracks the number of times the product in the mall was visited and presents a graph on a web page showing the view statistics and what pages the users are visiting within the mall.',
+      'WORK_EXPERIENCE_2_3_1': 'Used Laravel, jQuery, REDIS, and MySQL.',
+      'WORK_EXPERIENCE_2_3_2': 'Used the company\'s OAuth 2.0 based API.',
+      'WORK_EXPERIENCE_2_4': 'Developed a Composer package that leverages Laravel’s built-in Facade features that accesses and executes the company\'s old employee information system in a more semantically beautiful way.',
+      'WORK_EXPERIENCE_2_5': 'Developed another Composer package that ports an old functional code provided by the developers years ago to object-oriented and Laravel-friendly functions. It facilitates the auto login feature of the webmail app of the company inside the employee information system.',
+      'WORK_EXPERIENCE_2_6': 'Created and published this tech blog about often overlooked functions and features of Laravel\’s ORM package, Eloquent.',
     }
   }
 };
