@@ -55,6 +55,8 @@ export default {
       'WORK_EXPERIENCE_2_4': 'Laravel의 내장된 Facade 기능을 활용하여 회사의 오래된 직원 정보 시스템에 액세스하고 보다 의미적으로 아름다운 방식으로 실행하는 Composer 패키지를 개발했습니다.',
       'WORK_EXPERIENCE_2_5': '수년 전 개발자들이 제공한 오래된 기능 코드를 객체 지향적이고 Laravel 친화적인 함수에 이식하는 또 다른 Composer 패키지를 개발했습니다. 직원정보시스템 내에서 회사 웹메일 앱의 자동 로그인을 용이하게 합니다.',
       'WORK_EXPERIENCE_2_6': 'Laravel의 ORM 패키지인 Eloquent의 기능과 기능에 대해 종종 간과되는 기술 블로그를 만들고 게시했습니다.',
+      'WORK_EXPERIENCE_3_1': '직원의 근무 시간 및 근무 중지를 모니터링, 표시 및 처리하고 총 급여를 계산하는 앱을 개발했습니다.',
+      'WORK_EXPERIENCE_3_1_1': 'Zend Framework, jQuery 및 MySQL을 사용했습니다.',
     }
   }
 };
