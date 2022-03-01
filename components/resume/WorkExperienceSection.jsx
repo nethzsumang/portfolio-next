@@ -72,6 +72,22 @@ export default function WorkExperienceSection () {
           </li>
         </ul>
       </ExperienceSection>
+
+      <ExperienceSection
+        company="Curo Teknika Inc."
+        position="Application Developer Intern"
+        yearStart="2017"
+        yearEnd="2017"
+      >
+        <ul className="resume__work-experience__parent_ul">
+          <li>
+            { t('WORK_EXPERIENCE.WORK_EXPERIENCE_3_1') }
+            <ul>
+              <li>{ t('WORK_EXPERIENCE.WORK_EXPERIENCE_3_1_1') }</li>
+            </ul>
+          </li>
+        </ul>
+      </ExperienceSection>
     </ResumeSection>
   );
 }

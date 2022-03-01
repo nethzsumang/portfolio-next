@@ -55,6 +55,8 @@ export default {
       'WORK_EXPERIENCE_2_4': 'Developed a Composer package that leverages Laravel’s built-in Facade features that accesses and executes the company\'s old employee information system in a more semantically beautiful way.',
       'WORK_EXPERIENCE_2_5': 'Developed another Composer package that ports an old functional code provided by the developers years ago to object-oriented and Laravel-friendly functions. It facilitates the auto login feature of the webmail app of the company inside the employee information system.',
       'WORK_EXPERIENCE_2_6': 'Created and published this tech blog about often overlooked functions and features of Laravel\’s ORM package, Eloquent.',
+      'WORK_EXPERIENCE_3_1': 'Developed an app that monitors, displays and processes the time-in and time-out of an employee and computes their gross salary.',
+      'WORK_EXPERIENCE_3_1_1': 'Used Zend Framework, jQuery, and MySQL.',
     }
   }
 };
