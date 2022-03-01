@@ -57,6 +57,9 @@ export default {
       'WORK_EXPERIENCE_2_6': 'Created and published this tech blog about often overlooked functions and features of Laravel\’s ORM package, Eloquent.',
       'WORK_EXPERIENCE_3_1': 'Developed an app that monitors, displays and processes the time-in and time-out of an employee and computes their gross salary.',
       'WORK_EXPERIENCE_3_1_1': 'Used Zend Framework, jQuery, and MySQL.',
+    },
+    'EDUCATION': {
+      'HEADER': 'Education'
     }
   }
 };
