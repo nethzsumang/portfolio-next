@@ -25,7 +25,7 @@ function ResumeSection (props, children) {
 }
 
 ResumeSection.propTypes = {
-  header: PropTypes.string
+  header: PropTypes.string.isRequired
 };
 
 export default ResumeSection;

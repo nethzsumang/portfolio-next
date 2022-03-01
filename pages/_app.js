@@ -9,7 +9,7 @@ import Head from 'next/head';
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <html>
+    <div>
       <Head>
         <title>Portolio - Kenneth Sumang</title>
       </Head>
@@ -18,6 +18,6 @@ export default function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </DefaultLayout>
       </Provider>
-    </html>
+    </div>
   );
 }

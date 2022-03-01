@@ -4,6 +4,7 @@ import NameSection from '../components/resume/NameSection';
 import ContactSection from '../components/resume/ContactSection';
 import SkillsSection from '../components/resume/SkillsSection';
 import AchievementsSection from '../components/resume/AchievementsSection';
+import WorkExperienceSection from '../components/resume/WorkExperienceSection';
 
 /**
  * Portfolio page
@@ -27,6 +28,7 @@ export default function Resume () {
       <ContactSection />
       <SkillsSection />
       <AchievementsSection />
+      <WorkExperienceSection />
     </div>
   );
 }
