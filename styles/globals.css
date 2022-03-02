@@ -69,6 +69,16 @@ a {
     margin-top: 2rem;
   }
 
+  .articles-section__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .articles-section__header {
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+  }
+
   .articles__container {
     padding: 1rem 0 3rem 0;
     display: flex;
@@ -153,6 +163,15 @@ a {
     padding: 0 !important;
   }
 
+  .articles-section__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .articles-section__header {
+    margin-left: 1rem;
+  }
+
   .articles__container {
     padding: 1rem 0 3rem 0;
     display: flex;
@@ -235,6 +254,15 @@ a {
 
   .technical-skills__card__body {
     padding: 0 !important;
+  }
+
+  .articles-section__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .articles-section__header {
+    margin-left: 2.5rem;
   }
 
   .articles__container {

@@ -68,6 +68,9 @@ export default {
       'WHAT_I_DO_3': 'ES6, ES5 자바스크립트 기능을 활용한 웹 애플리케이션 개발 1년 경력입니다.',
       'WHAT_I_DO_4': 'Vue 2, Vuex, Vue i18n 및 Vue Router를 사용하여 프런트 엔드 애플리케이션을 만든 지 2년이 되었습니다.',
       'WHAT_I_DO_5': '리액트 웹 애플리케이션 코딩 1년 경력.',
+    },
+    'ARTICLES': {
+      'HEADER': '내 기사'
     }
   }
 };

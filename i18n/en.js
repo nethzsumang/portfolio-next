@@ -68,6 +68,9 @@ export default {
       'WHAT_I_DO_3': '1 year experience in developing web applications using ES6 and ES5 JavaScript functions.',
       'WHAT_I_DO_4': '2 years experience in creating front-end applications using Vue 2, Vuex, Vue i18n and Vue Router.',
       'WHAT_I_DO_5': '1 year experience in coding React web applications.',
+    },
+    'ARTICLES': {
+      'HEADER': 'My Articles'
     }
   }
 };
