@@ -23,6 +23,7 @@ export default function WhatIDoSection () {
         <TechnicalSkillCard header="Vanilla JavaScript" iconSrc="/images/js-icon.png">
           { t('WHAT_I_DO.WHAT_I_DO_3') }
         </TechnicalSkillCard>
+        <div className="technical-skills__break"></div>
         <TechnicalSkillCard header="VueJS" iconSrc="/images/vue-icon.png">
           { t('WHAT_I_DO.WHAT_I_DO_4') }
         </TechnicalSkillCard>
