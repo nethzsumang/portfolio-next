@@ -7,7 +7,6 @@ export default {
     'NAV': {
       'HOME': 'Home',
       'RESUME': 'Resumé',
-      'SKILLS': 'Skills',
       'LANGUAGE': 'English'
     },
     'HOME': {

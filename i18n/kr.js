@@ -7,7 +7,6 @@ export default {
     'NAV': {
       'HOME': '집',
       'RESUME': '이력서',
-      'SKILLS': '기술들',
       'LANGUAGE': '한국'
     },
     'HOME': {
