@@ -1,0 +1,85 @@
+/* smartphones, iPhone, portrait 480x320 phones */
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media only screen and (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .home__jumbotron {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .what-i-do__container {
+    margin-left: 1rem;
+    margin-top: 3rem;
+  }
+
+  .technical-skills__break {
+    flex-basis: 0;
+    height: 0;
+  }
+
+  .technical-skills__card__body {
+    padding: 0 !important;
+  }
+
+  .technical-skills__card {
+    margin-top: 2rem;
+  }
+
+  .articles-section__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .articles-section__header {
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+  }
+
+  .articles__container {
+    padding: 1rem 0 3rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .articles__card {
+    width: 85vw !important;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  .resume__container {
+    padding: 3rem 3rem 0 3rem;
+  }
+
+  .contacts__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resume__work-experience__company-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .resume__work-experience__company {
+    width: 100%;
+  }
+
+  .resume__work-experience__year-container {
+    width: 100%
+  }
+
+  .resume__work-experience__parent_ul {
+    margin-left: 1rem;
+    margin-top: 1rem !important;
+  }
+
+  .resume__work-experience__li {
+    margin-top: 1rem !important;
+  }
+}

@@ -1,6 +1,6 @@
 import { Provider } from 'react-redux';
 import DefaultLayout from '../layouts/DefaultLayout';
-import '../styles/globals.css';
+import '../styles/globals.scss';
 import store from '../store';
 import '../plugins/react-i18n';
 import 'bootstrap/dist/css/bootstrap.min.css';
