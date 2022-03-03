@@ -1,0 +1,22 @@
+.articles-section__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.articles-section__header {
+  margin-left: 1rem;
+}
+
+.articles__container {
+  padding: 1rem 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.articles__card {
+  width: 85vw !important;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}

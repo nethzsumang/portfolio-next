@@ -1,0 +1,15 @@
+/* smartphones, iPhone, portrait 480x320 phones */
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+@media only screen and (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .home__jumbotron {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  @import './index/index.scss';
+  @import './resume/index.scss';
+}

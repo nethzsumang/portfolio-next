@@ -1,0 +1,26 @@
+.what-i-do__container {
+  margin-top: 3rem;
+  margin-left: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.technical-skills__container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+
+.technical-skills__card {
+  width: 16%;
+  margin-right: 2rem;
+  height: 15rem;
+}
+
+.technical-skills__break {
+  flex-basis: 0;
+  height: 0;
+}
+
+.technical-skills__card__body {
+  padding: 0 !important;
+}

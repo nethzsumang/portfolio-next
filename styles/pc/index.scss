@@ -1,0 +1,9 @@
+/* pc's */
+@media only screen and (min-width: 961px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  @import './index/index.scss';
+  @import './resume/index.scss';
+}

@@ -1,0 +1,9 @@
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media only screen and (min-width: 641px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  @import './index/index.scss';
+  @import './resume/index.scss';
+}
