@@ -1,3 +1,4 @@
+import { t } from 'i18next';
 import { Card } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 
@@ -29,47 +30,50 @@ export default function ArticlesSection () {
   }
 
   return (
-    <div className="articles__container">
-      <Card
-        className="articles__card"
-        onClick={() => handleArticleCardClick(1)}
-      >
-        <Card.Img variant="top" src="https://miro.medium.com/max/1400/0*l4mKJPK2gq9n9e-q" />
-        <Card.Body className={appTheme === 'dark' ? '__dark-div' : ''}>
-          <Card.Title>Hidden Gems in Eloquent ORM — Laravel 7.x</Card.Title>
-          <Card.Text>
-            Many of us use Eloquent when programming with Laravel. But believe it or not, 
-            there are many hidden gems in Eloquent that is waiting to be revealed...
-          </Card.Text>
-        </Card.Body>
-      </Card>
+    <div className="articles-section__container">
+      <h3 className="articles-section__header">{ t('ARTICLES.HEADER') }</h3>
+      <div className="articles__container">
+        <Card
+          className="articles__card"
+          onClick={() => handleArticleCardClick(1)}
+        >
+          <Card.Img variant="top" src="https://miro.medium.com/max/1400/0*l4mKJPK2gq9n9e-q" />
+          <Card.Body className={appTheme === 'dark' ? '__dark-div' : ''}>
+            <Card.Title>Hidden Gems in Eloquent ORM — Laravel 7.x</Card.Title>
+            <Card.Text>
+              Many of us use Eloquent when programming with Laravel. But believe it or not, 
+              there are many hidden gems in Eloquent that is waiting to be revealed...
+            </Card.Text>
+          </Card.Body>
+        </Card>
 
-      <Card
-        className="articles__card"
-        onClick={() => handleArticleCardClick(2)}
-      >
-        <Card.Img variant="top" src="https://miro.medium.com/max/1400/0*H8QHKGRNHPUINiu4" />
-        <Card.Body className={appTheme === 'dark' ? '__dark-div' : ''}>
-          <Card.Title>Understanding Digital Image Processing</Card.Title>
-          <Card.Text>
-          You suddenly want to know how your smartphone or computer represent images you took. 
-          In this article, I will discuss what is an image and how image processing work...
-          </Card.Text>
-        </Card.Body>
-      </Card>
+        <Card
+          className="articles__card"
+          onClick={() => handleArticleCardClick(2)}
+        >
+          <Card.Img variant="top" src="https://miro.medium.com/max/1400/0*H8QHKGRNHPUINiu4" />
+          <Card.Body className={appTheme === 'dark' ? '__dark-div' : ''}>
+            <Card.Title>Understanding Digital Image Processing</Card.Title>
+            <Card.Text>
+            You suddenly want to know how your smartphone or computer represent images you took. 
+            In this article, I will discuss what is an image and how image processing work...
+            </Card.Text>
+          </Card.Body>
+        </Card>
 
-      <Card
-        className="articles__card"
-        onClick={() => handleArticleCardClick(3)}
-      >
-        <Card.Img variant="top" src="https://miro.medium.com/max/1400/1*lovxQO12mwBmO3mhK2QeIg.jpeg" />
-        <Card.Body className={appTheme === 'dark' ? '__dark-div' : ''}>
-          <Card.Title>Introducing SAPUI5 Helper</Card.Title>
-          <Card.Text>
-          In the middle of it, you thought, “Is there something I can use to create all these boilerplate codes easily?”
-          </Card.Text>
-        </Card.Body>
-      </Card>
+        <Card
+          className="articles__card"
+          onClick={() => handleArticleCardClick(3)}
+        >
+          <Card.Img variant="top" src="https://miro.medium.com/max/1400/1*lovxQO12mwBmO3mhK2QeIg.jpeg" />
+          <Card.Body className={appTheme === 'dark' ? '__dark-div' : ''}>
+            <Card.Title>Introducing SAPUI5 Helper</Card.Title>
+            <Card.Text>
+            In the middle of it, you thought, “Is there something I can use to create all these boilerplate codes easily?”
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
     </div>
   );
 }

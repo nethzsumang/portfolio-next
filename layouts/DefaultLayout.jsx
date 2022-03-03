@@ -98,15 +98,6 @@ export default function DefaultLayout ({ children }) {
               >
                 { t('NAV.RESUME' )}
               </Nav.Link>
-
-              <Nav.Link
-                href="/skills"
-                disabled={true}
-                onClick={event => navigate(event, "/skills")}
-                active={isNavActive("/skills")}
-              >
-                { t('NAV.SKILLS' )}
-              </Nav.Link>
             </Nav>
 
             <Nav>

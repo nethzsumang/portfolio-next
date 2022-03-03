@@ -7,7 +7,6 @@ export default {
     'NAV': {
       'HOME': 'Home',
       'RESUME': 'Resumé',
-      'SKILLS': 'Skills',
       'LANGUAGE': 'English'
     },
     'HOME': {
@@ -60,6 +59,18 @@ export default {
     },
     'EDUCATION': {
       'HEADER': 'Education'
+    },
+    'WHAT_I_DO': {
+      'HEADER': 'What I Do',
+      'DESCRIPTION': 'I have almost 4 years of experience developing customer-facing web applications. Below are some of my technical skills.',
+      'WHAT_I_DO_1': 'Almost 4 years experience in developing back-end web applications using PHP and Laravel.',
+      'WHAT_I_DO_2': 'Almost 4 years experience in creating normalized and optimized tables and queries for efficient web applications.',
+      'WHAT_I_DO_3': '1 year experience in developing web applications using ES6 and ES5 JavaScript functions.',
+      'WHAT_I_DO_4': '2 years experience in creating front-end applications using Vue 2, Vuex, Vue i18n and Vue Router.',
+      'WHAT_I_DO_5': '1 year experience in coding React web applications.',
+    },
+    'ARTICLES': {
+      'HEADER': 'My Articles'
     }
   }
 };

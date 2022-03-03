@@ -6,29 +6,29 @@ import TechnicalSkillCard from './technical-skills/TechnicalSkillCard';
  * @author Kenneth Sumang
  */
 export default function WhatIDoSection () {
+  const { t } = useTranslation();
+
   return (
     <div className="what-i-do__container">
-      <h3> What I Do </h3>
-      <p>
-        I have almost 4 years of experience developing customer-facing web applications. Below are some of my 
-        technical skills.
-      </p>
+      <h3>{ t('WHAT_I_DO.HEADER') }</h3>
+      <p>{ t('WHAT_I_DO.DESCRIPTION') }</p>
 
       <div className="technical-skills__container">
         <TechnicalSkillCard header="Laravel" iconSrc="/images/laravel-icon.svg">
-          Almost 4 years experience in developing back-end web applications using PHP and Laravel.
+          { t('WHAT_I_DO.WHAT_I_DO_1') }
         </TechnicalSkillCard>
         <TechnicalSkillCard header="MySQL" iconSrc="/images/mysql-icon.png">
-          Almost 4 years experience in creating normalized and optimized tables and queries for efficient web applications.
+          { t('WHAT_I_DO.WHAT_I_DO_2') }
         </TechnicalSkillCard>
         <TechnicalSkillCard header="Vanilla JavaScript" iconSrc="/images/js-icon.png">
-          1 year experience in developing web applications using ES6 and ES5 JavaScript functions.
+          { t('WHAT_I_DO.WHAT_I_DO_3') }
         </TechnicalSkillCard>
+        <div className="technical-skills__break"></div>
         <TechnicalSkillCard header="VueJS" iconSrc="/images/vue-icon.png">
-          2 years experience in creating front-end applications using Vue 2, Vuex, Vue i18n and Vue Router.
+          { t('WHAT_I_DO.WHAT_I_DO_4') }
         </TechnicalSkillCard>
         <TechnicalSkillCard header="ReactJS" iconSrc="/images/react-icon.png">
-          1 year experience in coding React web applications.
+          { t('WHAT_I_DO.WHAT_I_DO_5') }
         </TechnicalSkillCard> 
       </div>
     </div>
