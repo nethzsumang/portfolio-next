@@ -108,7 +108,9 @@ export default function DefaultLayout ({ children }) {
               />
             </Nav>
 
-            <NavDropdown title={ t('NAV.LANGUAGE') } menuVariant={appTheme}>
+            <NavDropdown
+              title={ t('NAV.LANGUAGE') } menuVariant={appTheme}
+              className="language__dropdown">
               <NavDropdown.Item
                 onClick={() => changeLanguageEvent("en")}
                 active={lang === "en"}
