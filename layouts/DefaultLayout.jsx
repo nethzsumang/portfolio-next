@@ -100,7 +100,7 @@ export default function DefaultLayout ({ children }) {
               </Nav.Link>
             </Nav>
 
-            <Nav>
+            <Nav className="__dark-mode-toggle-nav">
               <DarkModeToggle
                 onChange={onChangeThemeToggle}
                 checked={appTheme === 'dark'}
