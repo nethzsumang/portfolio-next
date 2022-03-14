@@ -53,6 +53,10 @@ a {
   padding-top: 2rem;
 }
 
+.__dark-mode-toggle-nav button {
+  margin-right: 1rem;
+}
+
 @import './mobile/index.scss';
 @import './tablets/index.scss';
 @import './pc/index.scss';

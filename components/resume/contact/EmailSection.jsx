@@ -7,8 +7,8 @@ export default function EmailSection () {
     <div className="col-md-3">
       <i className="icon bi-envelope resume__icon"></i>
       <span>
-        <a href="mailto:work@kennethsumang.com">
-          work@kennethsumang.com
+        <a href="mailto:kdsumang@outlook.com">
+          kdsumang@outlook.com
         </a>
       </span>
     </div>

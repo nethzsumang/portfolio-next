@@ -10,6 +10,10 @@
     padding: 1rem;
   }
 
+  .language__dropdown .dropdown-toggle {
+    padding-left: 0 !important;
+  }
+
   @import './index/index.scss';
   @import './resume/index.scss';
 }
