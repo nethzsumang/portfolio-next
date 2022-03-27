@@ -72,7 +72,7 @@ export default function DefaultLayout ({ children }) {
   }
 
   return (
-    <div className={appTheme === 'dark' ? 'flex h-100 __dark-div' : 'flex h-100'}>
+    <div className={appTheme === 'dark' ? 'd-flex flex-column h-100 __dark-div' : 'd-flex flex-column h-100'}>
       <Navbar bg={appTheme} variant={appTheme} expand="lg" >
         <Container>
           <Navbar.Brand href="#home">
@@ -148,7 +148,8 @@ export default function DefaultLayout ({ children }) {
         </Container>
       </Navbar>
       <main>{children}</main>
-      <footer className="footer">
+
+      <footer className={appTheme === 'dark' ? "footer __dark-div" : "footer"}>
         © Kenneth Sumang, 2022
       </footer>
     </div>

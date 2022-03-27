@@ -9,15 +9,13 @@ import Head from 'next/head';
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <div>
-      <Head>
-        <title>Portolio - Kenneth Sumang</title>
-      </Head>
-      <Provider store={store}>
-        <DefaultLayout>
-          <Component {...pageProps} />
-        </DefaultLayout>
-      </Provider>
-    </div>
+    <Provider store={store}>
+      <DefaultLayout>
+        <Head>
+          <title>Portolio - Kenneth Sumang</title>
+        </Head>
+        <Component {...pageProps} />
+      </DefaultLayout>
+    </Provider>
   );
 }
