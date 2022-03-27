@@ -98,6 +98,24 @@ export default function DefaultLayout ({ children }) {
               >
                 { t('NAV.RESUME' )}
               </Nav.Link>
+
+              <Nav.Link
+                href="/projects"
+                onClick={event => navigate(event, "/projects")}
+                active={isNavActive("/projects")}
+                disabled={true}
+              >
+                { t('NAV.PROJECTS' )}
+              </Nav.Link>
+
+              <Nav.Link
+                href="/articles"
+                onClick={event => navigate(event, "/articles")}
+                active={isNavActive("/articles")}
+                disabled={true}
+              >
+                { t('NAV.ARTICLES' )}
+              </Nav.Link>
             </Nav>
 
             <Nav className="__dark-mode-toggle-nav">

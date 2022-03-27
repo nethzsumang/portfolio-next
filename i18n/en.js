@@ -7,7 +7,9 @@ export default {
     'NAV': {
       'HOME': 'Home',
       'RESUME': 'Resumé',
-      'LANGUAGE': 'English'
+      'LANGUAGE': 'English',
+      'PROJECTS': 'Projects',
+      'ARTICLES': 'Articles'
     },
     'HOME': {
       'DESCRIPTION': 'A Laravel developer with experience on front-end development.'
