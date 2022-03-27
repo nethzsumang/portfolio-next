@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import ProjectList from '../components/projects/ProjectList';
 
 /**
  * Projects page
@@ -20,6 +21,7 @@ export default function Projects() {
   return (
     <div className={containerStyle}>
       <main>
+        <ProjectList />
       </main>
     </div>
   )
