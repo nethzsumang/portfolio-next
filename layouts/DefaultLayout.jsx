@@ -28,6 +28,18 @@ export default function DefaultLayout ({ children }) {
     }
   }, []);
 
+  useEffect(() => {
+    if (router.pathname === '/projects') {
+      document.querySelector('html').style.height = '100%';
+      document.querySelector('body').style.height = '100%';
+      document.querySelector('#__next').style.height = '100%';
+    } else {
+      document.querySelector('html').style.height = '';
+      document.querySelector('body').style.height = '';
+      document.querySelector('#__next').style.height = '';
+    }
+  }, [router.pathname]);
+
   /**
    * Navigates to a given path
    * @param {object} event

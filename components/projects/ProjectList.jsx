@@ -28,12 +28,15 @@ export default function ProjectList() {
         <ListGroup.Item
           className={containerStyle}
         >
-          <div>
-            <b>Portfolio Website</b>
-            &emsp;
-            <LanguageBadge content="Next" />
-            <LanguageBadge content="React" />
-            <LanguageBadge content="Javascript" />
+          <div className="projects__project-container">
+            <div className="projects__project-header">
+              <b>Portfolio Website</b>
+            </div>
+            <div>
+              <LanguageBadge content="Next" />
+              <LanguageBadge content="React" />
+              <LanguageBadge content="Javascript" />
+            </div>
           </div>
           <div className="mt-1">
             Shows my projects and skills. (You're viewing it right now!)
