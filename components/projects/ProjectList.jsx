@@ -24,7 +24,7 @@ export default function ProjectList() {
   return (
     <div>
       <h3> My Projects </h3>
-      <ListGroup className="mb-5">
+      <ListGroup className="mb-5 mt-3">
         <ListGroup.Item
           className={containerStyle}
         >
