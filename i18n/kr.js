@@ -7,7 +7,9 @@ export default {
     'NAV': {
       'HOME': '집',
       'RESUME': '이력서',
-      'LANGUAGE': '한국'
+      'LANGUAGE': '한국',
+      'PROJECTS': '프로젝트',
+      'ARTICLES': '기사들'
     },
     'HOME': {
       'DESCRIPTION': '프런트 엔드 개발 경험이 있는 Laravel 개발자.'
