@@ -73,6 +73,12 @@ export default {
     },
     'ARTICLES': {
       'HEADER': '내 기사'
+    },
+    'PROJECTS': {
+      'PROJECT_1_DESCRIPTION': '프로젝트와 스킬을 표시합니다.(지금 보고 계십니다!)',
+      'PROJECT_2_DESCRIPTION': '페이지와 카드를 생성하여 개인 대시보드로 설정할 수 있습니다.',
+      'PROJECT_3_DESCRIPTION': '이것은 SAPUI5 개발자가 보일러 플레이트 파일을 만들 수 있도록 지원하는 NPM 패키지입니다.',
+      'PROJECT_4_DESCRIPTION': '이건 제 논문 프로젝트입니다. 영상 처리와 뉴럴 네트워크를 이용하여 녹내장을 검출합니다.',
     }
   }
 };

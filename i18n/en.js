@@ -73,6 +73,12 @@ export default {
     },
     'ARTICLES': {
       'HEADER': 'My Articles'
+    },
+    'PROJECTS': {
+      'PROJECT_1_DESCRIPTION': "Shows my projects and skills. (You're viewing it right now!)",
+      'PROJECT_2_DESCRIPTION': 'Allows you to create pages and cards, and set it as your personal dashboard.',
+      'PROJECT_3_DESCRIPTION': 'This is an NPM package that helps SAPUI5 developers to create boilerplate files.',
+      'PROJECT_4_DESCRIPTION': 'This is my thesis project. It detects glaucoma using image processing and neural network.',
     }
   }
 };

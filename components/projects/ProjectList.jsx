@@ -39,7 +39,7 @@ export default function ProjectList() {
             </div>
           </div>
           <div className="mt-1">
-            Shows my projects and skills. (You're viewing it right now!)
+            { t('PROJECTS.PROJECT_1_DESCRIPTION') }
           </div>
         </ListGroup.Item>
 
@@ -53,7 +53,7 @@ export default function ProjectList() {
             <LanguageBadge content="Javascript" />
           </div>
           <div className="mt-1">
-            Allows you to create pages and cards, and set it as your personal dashboard.
+          { t('PROJECTS.PROJECT_2_DESCRIPTION') }
           </div>
         </ListGroup.Item>
 
@@ -67,7 +67,7 @@ export default function ProjectList() {
             <LanguageBadge content="SAPUI5" />
           </div>
           <div className="mt-1">
-            This is an NPM package that helps SAPUI5 developers to create boilerplate files.
+          { t('PROJECTS.PROJECT_3_DESCRIPTION') }
           </div>
         </ListGroup.Item>
 
@@ -82,7 +82,7 @@ export default function ProjectList() {
             <LanguageBadge content="Tensorflow" />
           </div>
           <div className="mt-1">
-            This is my thesis project. It detects glaucoma using image processing and neural network.
+          { t('PROJECTS.PROJECT_4_DESCRIPTION') }
           </div>
         </ListGroup.Item>
       </ListGroup>
