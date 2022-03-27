@@ -22,7 +22,7 @@ export default function ProjectList() {
   }, [appTheme]);
 
   return (
-    <ListGroup>
+    <ListGroup className="mb-5">
       <ListGroup.Item
         className={containerStyle}
       >
@@ -48,7 +48,7 @@ export default function ProjectList() {
           <LanguageBadge content="JavaScript" />
         </div>
         <div className="mt-1">
-          Allows you to create pages and cards as your personal dashboard.
+          Allows you to create pages and cards, and set it as your personal dashboard.
         </div>
       </ListGroup.Item>
     </ListGroup>
