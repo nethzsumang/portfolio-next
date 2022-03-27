@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import ProjectList from '../components/projects/ProjectList';
 
 /**
  * Projects page
@@ -11,15 +12,16 @@ export default function Projects() {
 
   useEffect(() => {
     if (appTheme === 'dark') {
-      setContainerStyle('container __dark-div');
+      setContainerStyle('projects__container __full-height __dark-div');
     } else {
-      setContainerStyle('container');
+      setContainerStyle('projects__container __full-height');
     }
   }, [appTheme]);
 
   return (
     <div className={containerStyle}>
       <main>
+        <ProjectList />
       </main>
     </div>
   )

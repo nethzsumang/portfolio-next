@@ -28,6 +28,18 @@ export default function DefaultLayout ({ children }) {
     }
   }, []);
 
+  useEffect(() => {
+    if (router.pathname === '/projects') {
+      document.querySelector('html').style.height = '100%';
+      document.querySelector('body').style.height = '100%';
+      document.querySelector('#__next').style.height = '100%';
+    } else {
+      document.querySelector('html').style.height = '';
+      document.querySelector('body').style.height = '';
+      document.querySelector('#__next').style.height = '';
+    }
+  }, [router.pathname]);
+
   /**
    * Navigates to a given path
    * @param {object} event
@@ -72,7 +84,7 @@ export default function DefaultLayout ({ children }) {
   }
 
   return (
-    <div className={appTheme === 'dark' ? 'flex h-100 __dark-div' : 'flex h-100'}>
+    <div className={appTheme === 'dark' ? 'd-flex flex-column h-100 __dark-div' : 'd-flex flex-column h-100'}>
       <Navbar bg={appTheme} variant={appTheme} expand="lg" >
         <Container>
           <Navbar.Brand href="#home">
@@ -103,7 +115,6 @@ export default function DefaultLayout ({ children }) {
                 href="/projects"
                 onClick={event => navigate(event, "/projects")}
                 active={isNavActive("/projects")}
-                disabled={true}
               >
                 { t('NAV.PROJECTS' )}
               </Nav.Link>
@@ -149,7 +160,8 @@ export default function DefaultLayout ({ children }) {
         </Container>
       </Navbar>
       <main>{children}</main>
-      <footer className="footer">
+
+      <footer className={appTheme === 'dark' ? "footer __dark-div" : "footer"}>
         © Kenneth Sumang, 2022
       </footer>
     </div>
