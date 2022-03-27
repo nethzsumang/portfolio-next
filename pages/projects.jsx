@@ -12,9 +12,9 @@ export default function Projects() {
 
   useEffect(() => {
     if (appTheme === 'dark') {
-      setContainerStyle('container __dark-div');
+      setContainerStyle('projects__container __full-height __dark-div');
     } else {
-      setContainerStyle('container');
+      setContainerStyle('projects__container __full-height');
     }
   }, [appTheme]);
 

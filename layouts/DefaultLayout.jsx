@@ -103,7 +103,6 @@ export default function DefaultLayout ({ children }) {
                 href="/projects"
                 onClick={event => navigate(event, "/projects")}
                 active={isNavActive("/projects")}
-                disabled={true}
               >
                 { t('NAV.PROJECTS' )}
               </Nav.Link>
