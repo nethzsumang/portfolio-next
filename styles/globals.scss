@@ -70,6 +70,10 @@ a {
   padding-left: 0 !important;
 }
 
+.list-group-item {
+  border: none !important;
+}
+
 @import './mobile/index.scss';
 @import './tablets/index.scss';
 @import './pc/index.scss';
