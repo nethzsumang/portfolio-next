@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import JumbotronSection from '../components/index/JumbotronSection';
-import ArticlesSection from '../components/index/ArticlesSection';
 import WhatIDoSection from '../components/index/WhatIDoSection';
 
 /**
@@ -25,7 +24,6 @@ export default function Home() {
       <main>
         <JumbotronSection />
         <WhatIDoSection />
-        <ArticlesSection />
       </main>
     </div>
   )
