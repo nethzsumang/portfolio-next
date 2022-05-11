@@ -12,7 +12,7 @@ export default function MyApp({ Component, pageProps }) {
     <Provider store={store}>
       <DefaultLayout>
         <Head>
-          <title>Portolio - Kenneth Sumang</title>
+          <title>Kenneth Sumang | Web Developer</title>
         </Head>
         <Component {...pageProps} />
       </DefaultLayout>
