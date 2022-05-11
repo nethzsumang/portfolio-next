@@ -20,9 +20,12 @@ export default function DefaultLayout ({ children }) {
 
   useEffect(async () => {
     if (window !== undefined) {
-      const appTheme = window.localStorage.getItem('portfolio-app-theme') ?? 'light';
+      if (appTheme === null) {
+        const storageAppTheme = window.localStorage.getItem('portfolio-app-theme') ?? 'light';
+        dispatch(changeAppTheme(storageAppTheme));
+      }
+
       const lang = window.localStorage.getItem('portfolio-lang') ?? 'en';
-      dispatch(changeAppTheme(appTheme));
       dispatch(changeLang(lang));
       await i18n.changeLanguage(lang);
     }

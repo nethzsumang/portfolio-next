@@ -7,7 +7,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const appSlice = createSlice({
   name: 'app',
   initialState: {
-    appTheme: 'light',
+    appTheme: null,
     lang: 'en'
   },
   reducers: {
