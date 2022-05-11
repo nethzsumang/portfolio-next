@@ -15,7 +15,7 @@ export default function JumbotronSection () {
    * @returns {void}
    */
   function navigateToResumePage () {
-    router.push('/resume');
+    window.open('/download/resume.pdf', '_blank');
   }
 
   return (
