@@ -6,9 +6,11 @@ import '../plugins/react-i18n';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Head from 'next/head';
+import { SSRProvider } from 'react-bootstrap';
 
 export default function MyApp({ Component, pageProps }) {
   return (
+    <SSRProvider>
     <Provider store={store}>
       <DefaultLayout>
         <Head>
@@ -17,5 +19,6 @@ export default function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </DefaultLayout>
     </Provider>
+    </SSRProvider>
   );
 }
