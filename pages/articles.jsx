@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import ArticlesSection from '../components/articles/ArticlesSection';
 
 /**
  * Articles page
@@ -11,15 +12,16 @@ export default function Articles() {
 
   useEffect(() => {
     if (appTheme === 'dark') {
-      setContainerStyle('container __dark-div');
+      setContainerStyle('articles__main-container __full-height __dark-div');
     } else {
-      setContainerStyle('container');
+      setContainerStyle('articles__main-container __full-height');
     }
   }, [appTheme]);
 
   return (
     <div className={containerStyle}>
       <main>
+        <ArticlesSection />
       </main>
     </div>
   )
