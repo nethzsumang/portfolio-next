@@ -13,9 +13,9 @@ export default function History() {
 
   useEffect(() => {
     if (appTheme === 'dark') {
-      setContainerStyle('articles__main-container __full-height __dark-div');
+      setContainerStyle('history__container __full-height __dark-div');
     } else {
-      setContainerStyle('articles__main-container __full-height');
+      setContainerStyle('history__container __full-height');
     }
   }, [appTheme]);
 

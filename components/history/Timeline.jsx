@@ -1,3 +1,5 @@
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+
 /**
  * Timeline component
  * @author Kenneth Sumang
