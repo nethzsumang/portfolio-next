@@ -108,6 +108,14 @@ export default function DefaultLayout ({ children }) {
               </Nav.Link>
 
               <Nav.Link
+                href="/history"
+                onClick={event => navigate(event, "/history")}
+                active={isNavActive("/history")}
+              >
+                { t('NAV.HISTORY' )}
+              </Nav.Link>
+
+              <Nav.Link
                 href="/projects"
                 onClick={event => navigate(event, "/projects")}
                 active={isNavActive("/projects")}

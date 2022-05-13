@@ -9,7 +9,8 @@ export default {
       'RESUME': 'Resumé',
       'LANGUAGE': 'English',
       'PROJECTS': 'Projects',
-      'ARTICLES': 'Articles'
+      'ARTICLES': 'Articles',
+      'HISTORY': 'History',
     },
     'HOME': {
       'DESCRIPTION': 'A Laravel developer with experience on front-end development.'
