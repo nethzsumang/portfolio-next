@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import { useTranslation } from 'react-i18next';
 import ShowMore from 'react-show-more-button';
+import LanguageBadge from '../projects/LanguageBadge';
 
 /**
  * Timeline component
@@ -68,6 +69,13 @@ export default function Timeline() {
         >
           <h4 className="vertical-timeline-element-title">Cafe24 Philippines Inc.</h4>
           <h6 className="vertical-timeline-element-subtitle">Senior Web Developer</h6>
+          <div className="timeline__badge-container">
+            <LanguageBadge content="PHP" />
+            <LanguageBadge content="Laravel" />
+            <LanguageBadge content="JavaScript" />
+            <LanguageBadge content="React" />
+            <LanguageBadge content="Vue" />
+          </div>
           <div className="show-more-container">
             <ShowMore
               maxHeight={150}
@@ -105,6 +113,11 @@ export default function Timeline() {
         >
           <h4 className="vertical-timeline-element-title">Curo Teknika Inc.</h4>
           <h6 className="vertical-timeline-element-subtitle">Application Developer Intern</h6>
+          <div className="timeline__badge-container">
+            <LanguageBadge content="PHP" />
+            <LanguageBadge content="Zend" />
+            <LanguageBadge content="JavaScript" />
+          </div>
           <p>
           { t('HISTORY.HISTORY_2_1') }
           </p>
