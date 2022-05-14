@@ -21,12 +21,12 @@ export default function Timeline() {
     if (appTheme === 'dark') {
       setTimelineLineColor('#cccccc');
       setTimelineFontColor('#cccccc');
-      setTimelineContainerColor('rgb(33, 150, 243)');
+      setTimelineContainerColor('#000');
       setShowMoreContentClass('show-more-content-container-dark');
     } else {
       setTimelineLineColor('#000');
       setTimelineFontColor('#000');
-      setTimelineContainerColor('#ccc');
+      setTimelineContainerColor('#dee4e7');
       setShowMoreContentClass('show-more-content-container-light');
     }
   }, [appTheme]);
