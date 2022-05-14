@@ -56,7 +56,11 @@ export default function Timeline() {
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           position="right"
-          contentStyle={{ background: timeLineContainerColor, color: timelineFontColor }}
+          contentStyle={{ 
+            background: timeLineContainerColor,
+            color: timelineFontColor,
+            borderRadius: '20px' 
+          }}
           contentArrowStyle={{ borderRight: '7px solid  ' + timeLineContainerColor }}
           date="2018 - present"
           iconStyle={{ background: timelineIconContainerColor, color: timelineFontColor }}
@@ -89,7 +93,11 @@ export default function Timeline() {
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           position="left"
-          contentStyle={{ background: timeLineContainerColor, color: timelineFontColor }}
+          contentStyle={{ 
+            background: timeLineContainerColor,
+            color: timelineFontColor,
+            borderRadius: '20px' 
+          }}
           contentArrowStyle={{ borderRight: '7px solid  ' + timeLineContainerColor }}
           date="2017"
           iconStyle={{ background: timelineIconContainerColor, color: timelineFontColor }}
@@ -105,7 +113,11 @@ export default function Timeline() {
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           position="right"
-          contentStyle={{ background: timeLineContainerColor, color: timelineFontColor }}
+          contentStyle={{ 
+            background: timeLineContainerColor,
+            color: timelineFontColor,
+            borderRadius: '20px' 
+          }}
           contentArrowStyle={{ borderRight: '7px solid  ' + timeLineContainerColor }}
           date="2014 - 2018"
           iconStyle={{ background: timelineIconContainerColor, color: timelineFontColor }}
@@ -118,7 +130,11 @@ export default function Timeline() {
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           position="left"
-          contentStyle={{ background: timeLineContainerColor, color: timelineFontColor }}
+          contentStyle={{ 
+            background: timeLineContainerColor,
+            color: timelineFontColor,
+            borderRadius: '20px' 
+          }}
           contentArrowStyle={{ borderRight: '7px solid  ' + timeLineContainerColor }}
           date="2010 - 2014"
           iconStyle={{ background: timelineIconContainerColor, color: timelineFontColor }}
