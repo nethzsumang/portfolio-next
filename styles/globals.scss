@@ -74,6 +74,41 @@ a {
   border: none !important;
 }
 
+.timeline-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.5rem;
+}
+
+.vertical-timeline-element-content {
+  box-shadow: none !important;
+}
+
+.show-more-container {
+  .show-more-button:hover {
+    cursor: pointer !important;
+  }
+
+  .show-more-content-container-dark {
+    background: #000 !important;
+    color: #ccc !important;
+    margin-top: 1rem !important;
+  }
+
+  .show-more-content-container-light {
+    background: #dee4e7 !important;
+    color: #000 !important;
+    margin-top: 1rem !important;
+  }
+
+  .show-more-button-div {
+    padding: 0 !important;
+  }
+}
+
 @import './mobile/index.scss';
 @import './tablets/index.scss';
 @import './pc/index.scss';
+@import 'react-vertical-timeline-component/style.min.css';
