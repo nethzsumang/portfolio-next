@@ -1707,6 +1707,11 @@ react-responsive@^9.0.0-beta.6:
     prop-types "^15.6.1"
     shallow-equal "^1.2.1"
 
+react-show-more-button@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-show-more-button/-/react-show-more-button-1.0.0.tgz#5cee8f27977ec0636af649bb0cdd0422f66a8614"
+  integrity sha512-uDCVO99RB/nkDiW0Gztj3buxX3cEeoVc5pIrapYU6P40Msq5b28Krdi7c3BqqYF+W5Xz/eG3LSDmUfu3d6/k3A==
+
 react-transition-group@^4.4.1:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-4.4.2.tgz#8b59a56f09ced7b55cbd53c36768b922890d5470"
