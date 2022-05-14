@@ -15,6 +15,7 @@ export default function Timeline() {
   const [timelineLineColor, setTimelineLineColor] = useState('#cccccc');
   const [timeLineContainerColor, setTimelineContainerColor] = useState('rgb(33, 150, 243)');
   const [timelineFontColor, setTimelineFontColor] = useState('#cccccc');
+  const [timelineIconContainerColor, setTimelineIconContainerColor] = useState('#3498db');
   const [showMoreContentClass, setShowMoreContentClass] = useState('show-more-content-container-light');
 
   useEffect(() => {
@@ -22,11 +23,13 @@ export default function Timeline() {
       setTimelineLineColor('#cccccc');
       setTimelineFontColor('#cccccc');
       setTimelineContainerColor('#000');
+      setTimelineIconContainerColor('#000');
       setShowMoreContentClass('show-more-content-container-dark');
     } else {
       setTimelineLineColor('#000');
       setTimelineFontColor('#000');
       setTimelineContainerColor('#dee4e7');
+      setTimelineIconContainerColor('#B3E5FC');
       setShowMoreContentClass('show-more-content-container-light');
     }
   }, [appTheme]);
@@ -56,7 +59,7 @@ export default function Timeline() {
           contentStyle={{ background: timeLineContainerColor, color: timelineFontColor }}
           contentArrowStyle={{ borderRight: '7px solid  ' + timeLineContainerColor }}
           date="2018 - present"
-          iconStyle={{ background: timeLineContainerColor, color: timelineFontColor }}
+          iconStyle={{ background: timelineIconContainerColor, color: timelineFontColor }}
           icon={<i className="bi bi-briefcase timeline-icon"></i>}
         >
           <h4 className="vertical-timeline-element-title">Cafe24 Philippines Inc.</h4>
@@ -89,7 +92,7 @@ export default function Timeline() {
           contentStyle={{ background: timeLineContainerColor, color: timelineFontColor }}
           contentArrowStyle={{ borderRight: '7px solid  ' + timeLineContainerColor }}
           date="2017"
-          iconStyle={{ background: timeLineContainerColor, color: timelineFontColor }}
+          iconStyle={{ background: timelineIconContainerColor, color: timelineFontColor }}
           icon={<i className="bi bi-briefcase timeline-icon"></i>}
         >
           <h4 className="vertical-timeline-element-title">Curo Teknika Inc.</h4>
@@ -105,7 +108,7 @@ export default function Timeline() {
           contentStyle={{ background: timeLineContainerColor, color: timelineFontColor }}
           contentArrowStyle={{ borderRight: '7px solid  ' + timeLineContainerColor }}
           date="2014 - 2018"
-          iconStyle={{ background: timeLineContainerColor, color: timelineFontColor }}
+          iconStyle={{ background: timelineIconContainerColor, color: timelineFontColor }}
           icon={<i className="bi bi-mortarboard timeline-icon"></i>}
         >
           <h4 className="vertical-timeline-element-title">Polytechnic University of the Philippines</h4>
@@ -118,7 +121,7 @@ export default function Timeline() {
           contentStyle={{ background: timeLineContainerColor, color: timelineFontColor }}
           contentArrowStyle={{ borderRight: '7px solid  ' + timeLineContainerColor }}
           date="2010 - 2014"
-          iconStyle={{ background: timeLineContainerColor, color: timelineFontColor }}
+          iconStyle={{ background: timelineIconContainerColor, color: timelineFontColor }}
           icon={<i className="bi bi-mortarboard timeline-icon"></i>}
         >
           <h4 className="vertical-timeline-element-title">Pasig City Science High School</h4>
