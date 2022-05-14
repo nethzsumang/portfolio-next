@@ -4,6 +4,8 @@
  */
 export default function HistoryHeader() {
   return (
-    <div></div>
+    <div>
+      <h3>History</h3>
+    </div>
   );
 }
