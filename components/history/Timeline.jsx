@@ -6,6 +6,8 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
  */
 export default function Timeline() {
   return (
-    <div></div>
+    <div className="history__timeline-container">
+      Test
+    </div>
   );
 }
