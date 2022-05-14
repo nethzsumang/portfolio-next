@@ -11,7 +11,7 @@ import ShowMore from 'react-show-more-button';
 export default function Timeline() {
   const appTheme = useSelector(state => state.app.appTheme);
   const { t } = useTranslation();
-  const [showMoreText, setShowMoreText] = useState(t('TEXT.SHOW_MORE'));
+  const [showMoreText, setShowMoreText] = useState('Show More');
   const [timelineLineColor, setTimelineLineColor] = useState('#cccccc');
   const [timeLineContainerColor, setTimelineContainerColor] = useState('rgb(33, 150, 243)');
   const [timelineFontColor, setTimelineFontColor] = useState('#cccccc');
@@ -37,9 +37,9 @@ export default function Timeline() {
    */
   function onShowMoreStateChange(state) {
     if (state === false) {
-      setShowMoreText(t('TEXT.SHOW_LESS'));
+      setShowMoreText('Show Less');
     } else {
-      setShowMoreText(t('TEXT.SHOW_MORE'));
+      setShowMoreText('Show More');
     }
   }
 
