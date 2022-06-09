@@ -37,7 +37,7 @@ export default function ProjectList() {
         window.open('https://www.npmjs.com/package/sapui5-helper', '_blank');
         break;
       case 4:
-        alert('This project is private. Ask me for access. Email me at dev@kennethsumang.com.');
+        alert('This project is private. Ask me for access. Email me at kdsumang@outlook.com.');
         break;
     }
   }

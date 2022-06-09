@@ -165,7 +165,7 @@ export default function DefaultLayout ({ children }) {
       <main>{children}</main>
 
       <footer className={appTheme === 'dark' ? "footer __dark-div" : "footer"}>
-        © Kenneth Sumang, 2022
+        Site by Kenneth Sumang, 2022
       </footer>
     </div>
   );

@@ -6,7 +6,7 @@ export default {
     'APP_TITLE': 'Portfolio',
     'NAV': {
       'HOME': 'Home',
-      'RESUME': 'Resumé',
+      'RESUME': 'Resume',
       'LANGUAGE': 'English',
       'PROJECTS': 'Projects',
       'ARTICLES': 'Articles',

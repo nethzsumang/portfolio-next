@@ -116,7 +116,7 @@ export default function Timeline() {
           <div className="timeline__badge-container">
             <LanguageBadge content="PHP" />
             <LanguageBadge content="Zend" />
-            <LanguageBadge content="JavaScript" />
+            <LanguageBadge content="jQuery" />
           </div>
           <p>
           { t('HISTORY.HISTORY_2_1') }
