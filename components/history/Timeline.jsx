@@ -72,6 +72,7 @@ export default function Timeline() {
           <div className="timeline__badge-container">
             <LanguageBadge content="PHP" />
             <LanguageBadge content="Laravel" />
+            <LanguageBadge content="TDD" />
             <LanguageBadge content="JavaScript" />
             <LanguageBadge content="React" />
             <LanguageBadge content="Vue" />
