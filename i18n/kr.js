@@ -13,7 +13,7 @@ export default {
       'HISTORY': '역사',
     },
     'HOME': {
-      'DESCRIPTION': '프런트 엔드 개발 경험이 있는 Laravel 개발자.'
+      'DESCRIPTION': 'Laravel 및 JavaScript를 사용하는 전체 스택 개발자.'
     },
     'SKILLS': {
       'HEADER': '기술들',

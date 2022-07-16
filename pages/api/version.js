@@ -1,10 +1,18 @@
 export default function handler(req, res) {
   res.status(200).json({
-    version: '1.0.6',
-    since: '2022-07-15 10:47:00 UTC+0800',
+    version: '1.0.7',
+    since: '2022-07-16 16:32:00 UTC+0800',
     author: 'Kenneth Sumang',
-    email: 'kdsumang@outlook.com',
+    email: 'kennethsumang@outlook.com',
     changelog: [
+      {
+        version: '1.0.7',
+        since: '2022-07-16 16:32:00 UTC+0800',
+        changes: [
+          'Changed introduction text.',
+          'Changed email in API Version endpoint.'
+        ]
+      },
       {
         version: '1.0.6',
         since: '2022-07-15 10:47:00 UTC+0800',
