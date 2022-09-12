@@ -9,7 +9,7 @@ export default function handler(req, res) {
         version: '1.0.8',
         since: '2022-08-02 11:25:00 UTC+0800',
         changes: [
-          'Changed years of experience in skills and what i do section."
+          'Changed years of experience in skills and what i do section.'
         ]
       },
       {
