@@ -1,10 +1,17 @@
 export default function handler(req, res) {
   res.status(200).json({
-    version: '1.0.8',
-    since: '2022-08-02 11:25:00 UTC+0800',
+    version: '1.0.9',
+    since: '2022-09-12 14:10:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'kennethsumang@outlook.com',
     changelog: [
+      {
+        version: '1.0.9',
+        since: '2022-09-12 14:10:00 UTC+0800',
+        changes: [
+          'Fix white section on Index Page with Dark Mode on mobile devices.'
+        ]
+      },
       {
         version: '1.0.8',
         since: '2022-08-02 11:25:00 UTC+0800',
