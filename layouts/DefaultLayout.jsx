@@ -25,7 +25,7 @@ export default function DefaultLayout ({ children }) {
         dispatch(changeAppTheme(storageAppTheme));
       }
 
-      const lang = window.localStorage.getItem('portfolio-lang') ?? 'en';
+      const lang = 'en';
       dispatch(changeLang(lang));
       await i18n.changeLanguage(lang);
     }
@@ -139,26 +139,6 @@ export default function DefaultLayout ({ children }) {
                 size={70}
               />
             </Nav>
-
-            <NavDropdown
-              title={ t('NAV.LANGUAGE') } menuVariant={appTheme}
-              className="language__dropdown">
-              <NavDropdown.Item
-                onClick={() => changeLanguageEvent("en")}
-                active={lang === "en"}
-              >
-                <Flag code="US" height={16} className="__flag-icon" />
-                English
-              </NavDropdown.Item>
-
-              <NavDropdown.Item
-                onClick={() => changeLanguageEvent("kr")}
-                active={lang === "kr"}
-              >
-                <Flag code="KR" height={20} className="__flag-icon" />
-                한국
-              </NavDropdown.Item>
-            </NavDropdown>
           </Navbar.Collapse>
         </Container>
       </Navbar>

@@ -1,10 +1,18 @@
 export default function handler(req, res) {
   res.status(200).json({
-    version: '1.0.9',
-    since: '2022-09-12 14:10:00 UTC+0800',
+    version: '1.1.0',
+    since: '2022-10-18 19:35:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'kennethsumang@outlook.com',
     changelog: [
+      {
+        version: '1.1.0',
+        since: '2022-10-18 19:35:00 UTC+0800',
+        changes: [
+          'Updated resume.',
+          'Removed language selector.'
+        ]
+      },
       {
         version: '1.0.9',
         since: '2022-09-12 14:10:00 UTC+0800',
