@@ -70,9 +70,10 @@ export default function Timeline() {
           <h4 className="vertical-timeline-element-title">Cafe24 Philippines Inc.</h4>
           <h6 className="vertical-timeline-element-subtitle">Senior Web Developer</h6>
           <div className="timeline__badge-container">
+            <LanguageBadge content='Node' />
+            <LanguageBadge content='Typescript' />
             <LanguageBadge content="PHP" />
             <LanguageBadge content="Laravel" />
-            <LanguageBadge content="TDD" />
             <LanguageBadge content="JavaScript" />
             <LanguageBadge content="React" />
             <LanguageBadge content="Vue" />
@@ -90,10 +91,12 @@ export default function Timeline() {
               onChange={onShowMoreStateChange}
             >
               <ul>
-                <li>{ t('HISTORY.HISTORY_1_1') }</li>
-                <li>{ t('HISTORY.HISTORY_1_2') }</li>
-                <li>{ t('HISTORY.HISTORY_1_3') }</li>
-                <li>{ t('HISTORY.HISTORY_1_4') }</li>
+                <li>{ t('HISTORY.HISTORY_2_6') }</li>
+                <li>{ t('HISTORY.HISTORY_2_5') }</li>
+                <li>{ t('HISTORY.HISTORY_2_4') }</li>
+                <li>{ t('HISTORY.HISTORY_2_3') }</li>
+                <li>{ t('HISTORY.HISTORY_2_2') }</li>
+                <li>{ t('HISTORY.HISTORY_2_1') }</li>
               </ul>
             </ShowMore>
           </div>
@@ -120,7 +123,7 @@ export default function Timeline() {
             <LanguageBadge content="jQuery" />
           </div>
           <p>
-          { t('HISTORY.HISTORY_2_1') }
+          { t('HISTORY.HISTORY_1_1') }
           </p>
         </VerticalTimelineElement>
 

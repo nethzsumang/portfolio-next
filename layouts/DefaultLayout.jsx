@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
-import Flag from 'react-world-flags';
+// import Flag from 'react-world-flags';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/router';
 import DarkModeToggle from 'react-dark-mode-toggle';
@@ -13,12 +13,14 @@ import { changeAppTheme, changeLang } from '../store/slices/appSlice';
  */
 export default function DefaultLayout ({ children }) {
   const appTheme = useSelector(state => state.app.appTheme);
-  const lang = useSelector(state => state.app.lang);
+  const [appVersion, setAppVersion] = useState('');
+  // const lang = useSelector(state => state.app.lang);
   const { t, i18n } = useTranslation();
   const router = useRouter();
   const dispatch = useDispatch();
 
   useEffect(async () => {
+    await getAppVersion();
     if (window !== undefined) {
       if (appTheme === null) {
         const storageAppTheme = window.localStorage.getItem('portfolio-app-theme') ?? 'light';
@@ -43,6 +45,19 @@ export default function DefaultLayout ({ children }) {
       document.querySelector('#__next').style.height = '';
     }
   }, [router.pathname]);
+
+  /**
+   * Sets the app version
+   * @returns {Promise<void>}
+   */
+  async function getAppVersion() {
+    const response = await fetch('/api/version', {
+      method: 'GET'
+    });
+    const responseJson = await response.json();
+    console.log(responseJson);
+    setAppVersion(responseJson);
+  }
 
   /**
    * Navigates to a given path
@@ -85,6 +100,13 @@ export default function DefaultLayout ({ children }) {
   function isNavActive(navPath) {
     const pathName = router.pathname;
     return navPath === pathName;
+  }
+
+  function getAppVersionString() {
+    const appVersionString = appVersion['version'] || '';
+    const appVersionDate = appVersion['since'] ? appVersion['since'].substring(0, 10) : '';
+
+    return 'Portfolio v' + appVersionString + ' (' + appVersionDate + ')';
   }
 
   return (
@@ -144,8 +166,8 @@ export default function DefaultLayout ({ children }) {
       </Navbar>
       <main>{children}</main>
 
-      <footer className={appTheme === 'dark' ? "footer __dark-div" : "footer"}>
-        Site by Kenneth Sumang, 2022
+      <footer className={appTheme === 'dark' ? "d-flex flex-column pt-2 pb-2 footer __dark-div" : "d-flex flex-column pt-2 pb-2 footer"}>
+        <p className="mb-0"> { getAppVersionString() } </p>
       </footer>
     </div>
   );

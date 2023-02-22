@@ -83,11 +83,13 @@ export default {
     },
     'HISTORY': {
       'HEADER': 'History',
-      'HISTORY_1_1': 'Developed an information system that lets the employees view their schedules, file leaves and get their personal information. It also lets HR and admins edit the leave approval settings, leave generation settings, employee information and workday settings within the app.',
-      'HISTORY_1_2': 'Developed a rewards app based on the influencer’s fan purchases using a link provided by the app. It tracks and records user\’s checked out items, computes their total price, then gives rewards points depending on the percentage set by the mall admin.',
-      'HISTORY_1_3': 'Developed an app that lets the mall users see where the specific product can be shipped. It shows the list of the countries set by the admin for the specific product. It also gets the country code from the header of the request and issues an alert when the user\’s country is not included in the countries set by the mall admin on the product he is buying.',
-      'HISTORY_1_4': 'Developed an app that tracks the number of times the product in the mall was visited and presents a graph on a web page showing the view statistics and what pages the users are visiting within the mall.',
-      'HISTORY_2_1': 'Developed an app that monitors, displays and processes the time-in and time-out of an employee and computes their gross salary.',
+      'HISTORY_2_6': 'Developed new features, improvements and bug fixes for the company\'s desk management application.',
+      'HISTORY_2_5': 'Received and reviewed a knowledge transfer of the company’s Payroll application.',
+      'HISTORY_2_4': 'Developed an information system that lets the employees view their schedules, file leaves and get their personal information. It also lets HR and admins edit the leave approval settings, leave generation settings, employee information and workday settings within the app.',
+      'HISTORY_2_3': 'Developed a rewards app based on the influencer’s fan purchases using a link provided by the app. It tracks and records user\’s checked out items, computes their total price, then gives rewards points depending on the percentage set by the mall admin.',
+      'HISTORY_2_2': 'Developed an app that lets the mall users see where the specific product can be shipped. It shows the list of the countries set by the admin for the specific product. It also gets the country code from the header of the request and issues an alert when the user\’s country is not included in the countries set by the mall admin on the product he is buying.',
+      'HISTORY_2_1': 'Developed an app that tracks the number of times the product in the mall was visited and presents a graph on a web page showing the view statistics and what pages the users are visiting within the mall.',
+      'HISTORY_1_1': 'Developed an app that monitors, displays and processes the time-in and time-out of an employee and computes their gross salary.',
     }
   }
 };
