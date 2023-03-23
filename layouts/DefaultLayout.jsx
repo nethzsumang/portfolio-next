@@ -34,7 +34,7 @@ export default function DefaultLayout ({ children }) {
   }, []);
 
   useEffect(() => {
-    const pathSetMaxHeight = ['/', '/projects', '/articles'];
+    const pathSetMaxHeight = ['/', '/projects', '/articles', '/certificates'];
     if (pathSetMaxHeight.includes(router.pathname) === true) {
       document.querySelector('html').style.height = '100%';
       document.querySelector('body').style.height = '100%';
@@ -151,6 +151,14 @@ export default function DefaultLayout ({ children }) {
                 active={isNavActive("/articles")}
               >
                 { t('NAV.ARTICLES' )}
+              </Nav.Link>
+
+              <Nav.Link
+                href="/certificates"
+                onClick={event => navigate(event, "/certificates")}
+                active={isNavActive("/certificates")}
+              >
+                { t('NAV.CERTIFICATES' )}
               </Nav.Link>
             </Nav>
 
