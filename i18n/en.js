@@ -11,6 +11,7 @@ export default {
       'PROJECTS': 'Projects',
       'ARTICLES': 'Articles',
       'HISTORY': 'History',
+      'CERTIFICATES': 'Certificates',
     },
     'HOME': {
       'DESCRIPTION': 'A full stack developer using Laravel and JavaScript.'
