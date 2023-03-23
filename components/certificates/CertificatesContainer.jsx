@@ -10,12 +10,15 @@ import {useEffect, useState} from 'react';
 export default function CertificatesContainer() {
   const appTheme = useSelector(state => state.app.appTheme);
   const [containerStyle, setContainerStyle] = useState('');
+  const [certificateDateStyle, setCertificateDateStyle] = useState('');
 
   useEffect(() => {
     if (appTheme === 'dark') {
       setContainerStyle('d-flex align-items-start flex-column __no-left-padding __dark-div');
+      setCertificateDateStyle('certificates__certificate-date-dark');
     } else {
       setContainerStyle('d-flex align-items-start flex-column __no-left-padding');
+      setCertificateDateStyle('certificates__certificate-date-light');
     }
   }, [appTheme]);
 
@@ -54,6 +57,7 @@ export default function CertificatesContainer() {
           <div className="mt-1">
             DeepLearning.AI
           </div>
+          <small className={certificateDateStyle}>Issued November 2020</small>
         </ListGroup.Item>
 
         <ListGroup.Item
@@ -69,6 +73,7 @@ export default function CertificatesContainer() {
           <div className="mt-1">
             IBM Skills Network
           </div>
+          <small className={certificateDateStyle}>Issued August 2020</small>
         </ListGroup.Item>
 
         <ListGroup.Item
@@ -84,6 +89,7 @@ export default function CertificatesContainer() {
           <div className="mt-1">
             HarvardX
           </div>
+          <small className={certificateDateStyle}>Issued June 2020</small>
         </ListGroup.Item>
       </ListGroup>
     </div>

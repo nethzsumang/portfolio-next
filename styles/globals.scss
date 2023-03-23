@@ -116,6 +116,14 @@ a {
   }
 }
 
+.certificates__certificate-date-light {
+  color: #00000073 !important;
+}
+
+.certificates__certificate-date-dark {
+  color: #ccc !important;
+}
+
 @import './mobile/index.scss';
 @import './tablets/index.scss';
 @import './pc/index.scss';
