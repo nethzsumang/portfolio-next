@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
-// import Flag from 'react-world-flags';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/router';
 import DarkModeToggle from 'react-dark-mode-toggle';
@@ -14,7 +13,6 @@ import { changeAppTheme, changeLang } from '../store/slices/appSlice';
 export default function DefaultLayout ({ children }) {
   const appTheme = useSelector(state => state.app.appTheme);
   const [appVersion, setAppVersion] = useState('');
-  // const lang = useSelector(state => state.app.lang);
   const { t, i18n } = useTranslation();
   const router = useRouter();
   const dispatch = useDispatch();

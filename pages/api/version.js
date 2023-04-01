@@ -1,10 +1,19 @@
 export default function handler(req, res) {
   res.status(200).json({
-    version: '1.3.1',
-    since: '2023-03-23 22:34:00 UTC+0800',
+    version: '1.4.0',
+    since: '2023-04-02 01:24:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.4.0',
+        since: '2023-04-02 01:24:00 UTC+0800',
+        changes: [
+          'Added Jira and Confluence for What I Do section.',
+          'Removed Vue and React entries in What I Do section.',
+          'Edited Javascript entry in What I Do section.'
+        ]
+      },
       {
         version: '1.3.1',
         since: '2023-03-23 22:34:00 UTC+0800',

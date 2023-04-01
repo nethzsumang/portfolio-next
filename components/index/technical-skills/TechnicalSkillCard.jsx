@@ -19,8 +19,8 @@ function TechnicalSkillCard (props) {
           <Card.Title>
             <Image
               src={props.iconSrc}
-              height={24}
-              width={24}
+              height={props.height || 24}
+              width={props.width || 24}
             />
           </Card.Title>
           <Card.Text>
