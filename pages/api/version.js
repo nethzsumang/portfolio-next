@@ -11,7 +11,8 @@ export default function handler(req, res) {
         changes: [
           'Added Jira and Confluence for What I Do section.',
           'Removed Vue and React entries in What I Do section.',
-          'Edited Javascript entry in What I Do section.'
+          'Edited Javascript entry in What I Do section.',
+          'Added logo disclaimer.'
         ]
       },
       {

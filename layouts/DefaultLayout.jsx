@@ -174,6 +174,7 @@ export default function DefaultLayout ({ children }) {
 
       <footer className={appTheme === 'dark' ? "d-flex flex-column pt-2 pb-2 footer __dark-div" : "d-flex flex-column pt-2 pb-2 footer"}>
         <p className="mb-0"> { getAppVersionString() } </p>
+        <p>All trademarks, logos and brand names are the property of their respective owners.</p>
       </footer>
     </div>
   );
