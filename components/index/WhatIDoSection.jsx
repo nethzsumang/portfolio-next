@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import TechnicalSkillCard from './technical-skills/TechnicalSkillCard';
+import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
 
 /**
  * WhatIDoSection component
@@ -7,6 +9,14 @@ import TechnicalSkillCard from './technical-skills/TechnicalSkillCard';
  */
 export default function WhatIDoSection () {
   const { t } = useTranslation();
+  const appTheme = useSelector(state => state.app.appTheme);
+  const [jiraLogoUrl, setJiraLogoUrl] = useState('/images/jira-icon-light.png');
+  const [confluenceLogoUrl, setConfluenceLogoUrl] = useState('/images/confluence-icon-light.png');
+
+  useEffect(() => {
+    setJiraLogoUrl(`/images/jira-icon-${appTheme}.png`);
+    setConfluenceLogoUrl(`/images/confluence-icon-${appTheme}.png`);
+  }, [appTheme]);
 
   return (
     <div className="what-i-do__container">
@@ -20,14 +30,14 @@ export default function WhatIDoSection () {
         <TechnicalSkillCard header="MySQL" iconSrc="/images/mysql-icon.png">
           { t('WHAT_I_DO.WHAT_I_DO_2') }
         </TechnicalSkillCard>
-        <TechnicalSkillCard header="Vanilla JavaScript" iconSrc="/images/js-icon.png">
+        <TechnicalSkillCard header="JavaScript" iconSrc="/images/js-icon.png">
           { t('WHAT_I_DO.WHAT_I_DO_3') }
         </TechnicalSkillCard>
         <div className="technical-skills__break"></div>
-        <TechnicalSkillCard header="VueJS" iconSrc="/images/vue-icon.png">
+        <TechnicalSkillCard header="Jira" iconSrc={jiraLogoUrl} height={24} width={58}>
           { t('WHAT_I_DO.WHAT_I_DO_4') }
         </TechnicalSkillCard>
-        <TechnicalSkillCard header="ReactJS" iconSrc="/images/react-icon.png">
+        <TechnicalSkillCard header="Confluence" iconSrc={confluenceLogoUrl} height={24} width={137}>
           { t('WHAT_I_DO.WHAT_I_DO_5') }
         </TechnicalSkillCard> 
       </div>

@@ -69,9 +69,9 @@ export default {
       'DESCRIPTION': 'I have 4 years of experience developing customer-facing web applications. Below are some of my technical skills.',
       'WHAT_I_DO_1': '4 years experience in developing back-end web applications using PHP and Laravel.',
       'WHAT_I_DO_2': '4 years experience in creating normalized and optimized tables and queries for efficient web applications.',
-      'WHAT_I_DO_3': '1 year experience in developing web applications using ES6 and ES5 JavaScript functions.',
-      'WHAT_I_DO_4': '2 years experience in creating front-end applications using Vue 2, Vuex, Vue i18n and Vue Router.',
-      'WHAT_I_DO_5': '1 year experience in coding React web applications.',
+      'WHAT_I_DO_3': '4 years experience developing front-end modules using Vue, React, and plain Javascript.',
+      'WHAT_I_DO_4': 'Experienced in using Jira for task management in an Agile environment.',
+      'WHAT_I_DO_5': 'Experienced in creating development plans and documentations for various projects.',
     },
     'ARTICLES': {
       'HEADER': 'My Articles'
