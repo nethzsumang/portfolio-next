@@ -53,7 +53,6 @@ export default function DefaultLayout ({ children }) {
       method: 'GET'
     });
     const responseJson = await response.json();
-    console.log(responseJson);
     setAppVersion(responseJson);
   }
 

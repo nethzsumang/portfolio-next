@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
@@ -13,11 +14,55 @@ import ReCAPTCHA from 'react-google-recaptcha';
  */
 export default function ContactMeContainer() {
   const { t } = useTranslation();
+  const appTheme = useSelector(state => state.app.appTheme);
   const [ name, setName ] = useState('');
   const [ email, setEmail ] = useState('');
   const [ subject, setSubject ] = useState('');
   const [ content, setContent ] = useState('');
   const [ recaptchaValue, setRecaptchaValue ] = useState(false);
+
+  /**
+   * Handles contact form submission
+   */
+  async function handleContactFormSubmit() {
+    if (recaptchaValue !== true) {
+      alert('Please check the captcha checkbox.');
+      return;
+    }
+
+    if (name.length === 0 || email.length === 0 || subject.length === 0 || content.length === 0) {
+      alert('You are missing some of the form\'s data. Please check your submission and try again.');
+      return;
+    }
+
+    const formData = {
+      name: name,
+      email: email,
+      subject: subject,
+      content: content
+    };
+
+    const response = await fetch('/api/sendmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok === false) {
+      alert('Form submission failed.');
+      return;
+    }
+
+    alert('Successfully submitted. Expect a reply to the email that you provided.');
+    // reset form
+    setName('');
+    setEmail('');
+    setSubject('');
+    setContent('');
+  }
 
   return (
     <div>
@@ -73,13 +118,18 @@ export default function ContactMeContainer() {
                 size="normal"
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                 onChange={ () => setRecaptchaValue(true) }
+                theme={appTheme}
               />
             </Col>
           </Row>
 
           <Row className="mb-5">
             <Col className="d-flex flex-row">
-              <Button variant="primary" style={{ width: '100px' }}>
+              <Button
+                variant="primary"
+                style={{ width: '100px' }}
+                onClick={handleContactFormSubmit}
+              >
                 Submit
               </Button>
             </Col>
