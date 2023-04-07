@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
+import ContactMeContainer from '../components/contact-me/ContactMeContainer';
 
 /**
  * Contact Me page
@@ -21,7 +22,7 @@ export default function ContactMe() {
   return (
     <div className={containerStyle}>
       <main>
-        <h1>Contact Me</h1>
+        <ContactMeContainer />
       </main>
     </div>
   );

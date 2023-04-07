@@ -32,7 +32,7 @@ export default function DefaultLayout ({ children }) {
   }, []);
 
   useEffect(() => {
-    const pathSetMaxHeight = ['/', '/projects', '/articles', '/certificates'];
+    const pathSetMaxHeight = ['/', '/projects', '/articles', '/certificates', '/contact-me'];
     if (pathSetMaxHeight.includes(router.pathname) === true) {
       document.querySelector('html').style.height = '100%';
       document.querySelector('body').style.height = '100%';
