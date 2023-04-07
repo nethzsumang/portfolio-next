@@ -94,7 +94,7 @@ export default function ContactMeContainer() {
    * @returns {Promise<boolean>}
    */
   async function verifyRecaptcha() {
-    const token = recaptchaRef.getValue();
+    const token = recaptchaRef.current.getValue();
     const response = await fetch('/api/verify-captcha', {
       method: 'POST',
       body: JSON.stringify({ token: token })
