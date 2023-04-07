@@ -1,7 +1,7 @@
 /**
  * Contact Me Container page
- * @returns {JSX.Element}
- * @constructor
+ * @author Kenneth Sumang
+ * @since  2023.04.07
  */
 export default function ContactMeContainer() {
   return (
