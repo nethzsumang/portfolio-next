@@ -21,6 +21,17 @@ export default function ContactMeContainer() {
   const [ content, setContent ] = useState('');
   const [ recaptchaValue, setRecaptchaValue ] = useState(false);
   const [ isProcessing, setIsProcessing ] = useState(false);
+  let recaptchaRef;
+
+  /**
+   * Sets ref for recaptcha
+   * @param ref
+   */
+  function setRecaptchaRef(ref) {
+    if (ref) {
+      recaptchaRef = ref;
+    }
+  }
 
   /**
    * Handles contact form submission
@@ -67,6 +78,7 @@ export default function ContactMeContainer() {
     setEmail('');
     setSubject('');
     setContent('');
+    recaptchaRef.reset();
     setIsProcessing(false);
   }
 
@@ -121,6 +133,7 @@ export default function ContactMeContainer() {
           <Row className="mb-3">
             <Col>
               <ReCAPTCHA
+                ref={(ref) => setRecaptchaRef(ref)}
                 size="normal"
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                 onChange={ () => setRecaptchaValue(true) }

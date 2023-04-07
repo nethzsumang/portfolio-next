@@ -1,10 +1,17 @@
 export default function handler(req, res) {
   res.status(200).json({
-    version: '1.5.1',
-    since: '2023-04-07 19:00:00 UTC+0800',
+    version: '1.5.2',
+    since: '2023-04-07 19:05:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.5.2',
+        since: '2023-04-07 19:05:00 UTC+0800',
+        changes: [
+          'Resets captcha after successfully submitting.'
+        ]
+      },
       {
         version: '1.5.1',
         since: '2023-04-07 19:00:00 UTC+0800',
