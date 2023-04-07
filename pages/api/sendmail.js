@@ -32,14 +32,17 @@ export default async function handler(req, res) {
     content: content
   };
 
-  const response = await fetch(sendMailUri, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-    },
-    body: JSON.stringify(formData)
-  });
-
-  res.status(200).json({ success: true, data: response });
+  try {
+    const response = await fetch(sendMailUri, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+    res.status(200).json({ success: true, data: response });
+  } catch (e) {
+    res.status(500).json({ success: false });
+  }
 }

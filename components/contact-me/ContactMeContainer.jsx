@@ -44,6 +44,13 @@ export default function ContactMeContainer() {
       return;
     }
 
+    const verifyTokenResponse = await verifyRecaptcha();
+    if (verifyTokenResponse === false) {
+      alert('Verification failed. Please try again.');
+      setIsProcessing(false);
+      return;
+    }
+
     if (name.length === 0 || email.length === 0 || subject.length === 0 || content.length === 0) {
       alert('You are missing some of the form\'s data. Please check your submission and try again.');
       setIsProcessing(false);
@@ -80,6 +87,19 @@ export default function ContactMeContainer() {
     setContent('');
     recaptchaRef.reset();
     setIsProcessing(false);
+  }
+
+  /**
+   * Verify recaptcha
+   * @returns {Promise<boolean>}
+   */
+  async function verifyRecaptcha() {
+    const token = recaptchaRef.getValue();
+    const response = await fetch('/api/verify-captcha', {
+      method: 'POST',
+      body: JSON.stringify({ token: token })
+    });
+    return response.ok;
   }
 
   return (
