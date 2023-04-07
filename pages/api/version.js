@@ -1,10 +1,18 @@
 export default function handler(req, res) {
   res.status(200).json({
-    version: '1.4.0',
-    since: '2023-04-02 01:24:00 UTC+0800',
+    version: '1.5.0',
+    since: '2023-04-07 18:45:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.5.0',
+        since: '2023-04-07 18:45:00 UTC+0800',
+        changes: [
+          'Added contact me form page.',
+          'Changed copyright disclaimer to small tag.'
+        ]
+      },
       {
         version: '1.4.0',
         since: '2023-04-02 01:24:00 UTC+0800',
