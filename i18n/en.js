@@ -92,6 +92,9 @@ export default {
       'HISTORY_2_2': 'Developed an app that lets the mall users see where the specific product can be shipped. It shows the list of the countries set by the admin for the specific product. It also gets the country code from the header of the request and issues an alert when the user\’s country is not included in the countries set by the mall admin on the product he is buying.',
       'HISTORY_2_1': 'Developed an app that tracks the number of times the product in the mall was visited and presents a graph on a web page showing the view statistics and what pages the users are visiting within the mall.',
       'HISTORY_1_1': 'Developed an app that monitors, displays and processes the time-in and time-out of an employee and computes their gross salary.',
+    },
+    'CONTACT_ME': {
+      'CONTACT_TEXT': 'Please fill out this form and I will answer as soon as possible.',
     }
   }
 };
