@@ -12,6 +12,7 @@ export default {
       'ARTICLES': 'Articles',
       'HISTORY': 'History',
       'CERTIFICATES': 'Certificates',
+      'CONTACT_ME': 'Contact Me',
     },
     'HOME': {
       'DESCRIPTION': 'A full stack developer using Laravel and JavaScript.'

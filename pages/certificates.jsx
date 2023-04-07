@@ -1,7 +1,6 @@
-import {useSelector} from "react-redux";
-import {useEffect, useState} from "react";
-import ArticlesSection from "../components/articles/ArticlesSection";
-import CertificatesContainer from "../components/certificates/CertificatesContainer";
+import {useSelector} from 'react-redux';
+import {useEffect, useState} from 'react';
+import CertificatesContainer from '../components/certificates/CertificatesContainer';
 
 /**
  * Certificates page

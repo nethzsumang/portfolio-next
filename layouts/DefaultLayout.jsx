@@ -158,6 +158,14 @@ export default function DefaultLayout ({ children }) {
               >
                 { t('NAV.CERTIFICATES' )}
               </Nav.Link>
+
+              <Nav.Link
+                href="/contact-me"
+                onClick={event => navigate(event, "/contact-me")}
+                active={isNavActive("/contact-me")}
+              >
+                { t('NAV.CONTACT_ME' )}
+              </Nav.Link>
             </Nav>
 
             <Nav className="__dark-mode-toggle-nav">
@@ -173,8 +181,8 @@ export default function DefaultLayout ({ children }) {
       <main>{children}</main>
 
       <footer className={appTheme === 'dark' ? "d-flex flex-column pt-2 pb-2 footer __dark-div" : "d-flex flex-column pt-2 pb-2 footer"}>
-        <p className="mb-0"> { getAppVersionString() } </p>
-        <p>All trademarks, logos and brand names are the property of their respective owners.</p>
+        <p className="mb-0 text-center"> { getAppVersionString() } </p>
+        <small className="text-center">All trademarks, logos and brand names are the property of their respective owners.</small>
       </footer>
     </div>
   );
