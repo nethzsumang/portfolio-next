@@ -1,10 +1,17 @@
 export default function handler(req, res) {
   res.status(200).json({
-    version: '1.5.0',
-    since: '2023-04-07 18:45:00 UTC+0800',
+    version: '1.5.1',
+    since: '2023-04-07 19:00:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.5.1',
+        since: '2023-04-07 19:00:00 UTC+0800',
+        changes: [
+          'Disabled button when contact form processing is ongoing.'
+        ]
+      },
       {
         version: '1.5.0',
         since: '2023-04-07 18:45:00 UTC+0800',

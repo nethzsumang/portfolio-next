@@ -20,18 +20,22 @@ export default function ContactMeContainer() {
   const [ subject, setSubject ] = useState('');
   const [ content, setContent ] = useState('');
   const [ recaptchaValue, setRecaptchaValue ] = useState(false);
+  const [ isProcessing, setIsProcessing ] = useState(false);
 
   /**
    * Handles contact form submission
    */
   async function handleContactFormSubmit() {
+    setIsProcessing(true);
     if (recaptchaValue !== true) {
       alert('Please check the captcha checkbox.');
+      setIsProcessing(false);
       return;
     }
 
     if (name.length === 0 || email.length === 0 || subject.length === 0 || content.length === 0) {
       alert('You are missing some of the form\'s data. Please check your submission and try again.');
+      setIsProcessing(false);
       return;
     }
 
@@ -53,6 +57,7 @@ export default function ContactMeContainer() {
 
     if (response.ok === false) {
       alert('Form submission failed.');
+      setIsProcessing(false);
       return;
     }
 
@@ -62,6 +67,7 @@ export default function ContactMeContainer() {
     setEmail('');
     setSubject('');
     setContent('');
+    setIsProcessing(false);
   }
 
   return (
@@ -129,6 +135,7 @@ export default function ContactMeContainer() {
                 variant="primary"
                 style={{ width: '100px' }}
                 onClick={handleContactFormSubmit}
+                disabled={isProcessing === true}
               >
                 Submit
               </Button>
