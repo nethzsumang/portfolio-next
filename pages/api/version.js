@@ -1,10 +1,17 @@
 export default function handler(req, res) {
   res.status(200).json({
-    version: '1.5.3',
-    since: '2023-04-07 19:25:00 UTC+0800',
+    version: '1.5.4',
+    since: '2023-04-07 23:50:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.5.4',
+        since: '2023-04-07 23:50:00 UTC+0800',
+        changes: [
+          'Fix styling on Contact Me page in mobile.'
+        ]
+      },
       {
         version: '1.5.3',
         since: '2023-04-07 19:25:00 UTC+0800',

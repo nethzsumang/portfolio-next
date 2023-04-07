@@ -106,7 +106,7 @@ export default function ContactMeContainer() {
     <div>
       <h3> Contact Me </h3>
       <p>{ t('CONTACT_ME.CONTACT_TEXT') }</p>
-      <div className="col-6">
+      <div className="col-md-6 col-sm-12">
         <Form>
           <Row className="mb-3">
             <Col className="col-md-5">
