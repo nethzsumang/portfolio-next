@@ -1,10 +1,17 @@
 export default function handler(req, res) {
   res.status(200).json({
-    version: '1.5.6',
-    since: '2023-04-08 23:30:00 UTC+0800',
+    version: '1.5.7',
+    since: '2023-04-09 00:05:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.5.7',
+        since: '2023-04-09 00:05:00 UTC+0800',
+        changes: [
+          'Fixed white text on Show More container in Timeline.'
+        ]
+      },
       {
         version: '1.5.6',
         since: '2023-04-08 23:30:00 UTC+0800',
