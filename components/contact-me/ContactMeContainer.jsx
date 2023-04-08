@@ -103,7 +103,7 @@ export default function ContactMeContainer() {
   }
 
   return (
-    <div>
+    <div data-bs-theme={appTheme}>
       <h3> Contact Me </h3>
       <p>{ t('CONTACT_ME.CONTACT_TEXT') }</p>
       <div className="col-md-6 col-sm-12">

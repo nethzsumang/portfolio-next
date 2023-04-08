@@ -124,6 +124,7 @@ a {
   color: #ccc !important;
 }
 
+@import 'bootstrap/dist/css/bootstrap.min.css';
 @import './mobile/index.scss';
 @import './tablets/index.scss';
 @import './pc/index.scss';
