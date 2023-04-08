@@ -32,6 +32,14 @@ export default function DefaultLayout ({ children }) {
   }, []);
 
   useEffect(() => {
+    // fix for white div on the index page
+    if (router.pathname === '/') {
+      document.querySelectorAll('main div').forEach((element) => {
+        element.style.height = '100%';
+        element.style.minHeight = '100%';
+      });
+    }
+
     const pathSetMaxHeight = ['/', '/projects', '/articles', '/certificates', '/contact-me'];
     if (pathSetMaxHeight.includes(router.pathname) === true) {
       document.querySelector('html').style.height = '100%';
