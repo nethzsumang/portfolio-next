@@ -1,10 +1,17 @@
 export default function handler(req, res) {
   res.status(200).json({
-    version: '1.5.5',
-    since: '2023-04-08 23:00:00 UTC+0800',
+    version: '1.5.6',
+    since: '2023-04-08 23:30:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.5.6',
+        since: '2023-04-08 23:30:00 UTC+0800',
+        changes: [
+          'Implemented workaround to re-mount Recaptcha when theme changes.'
+        ]
+      },
       {
         version: '1.5.5',
         since: '2023-04-08 23:00:00 UTC+0800',

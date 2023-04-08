@@ -103,52 +103,54 @@ export default function ContactMeContainer() {
   }
 
   return (
-    <div data-bs-theme={appTheme}>
+    <div>
       <h3> Contact Me </h3>
       <p>{ t('CONTACT_ME.CONTACT_TEXT') }</p>
       <div className="col-md-6 col-sm-12">
         <Form>
-          <Row className="mb-3">
-            <Col className="col-md-5">
-              <Form.Control
-                type="text"
-                placeholder="Name"
-                value={name}
-                onChange={ (e) => setName(e.target.value) }
-              />
-            </Col>
-            <Col>
-              <Form.Control
-                type="email"
-                placeholder="Email Address"
-                value={email}
-                onChange={ (e) => setEmail(e.target.value) }
-              />
-            </Col>
-          </Row>
+          <div data-bs-theme={appTheme}>
+            <Row className="mb-3">
+              <Col className="col-md-5">
+                <Form.Control
+                  type="text"
+                  placeholder="Name"
+                  value={name}
+                  onChange={ (e) => setName(e.target.value) }
+                />
+              </Col>
+              <Col>
+                <Form.Control
+                  type="email"
+                  placeholder="Email Address"
+                  value={email}
+                  onChange={ (e) => setEmail(e.target.value) }
+                />
+              </Col>
+            </Row>
 
-          <Row className="mb-3">
-            <Col>
-              <Form.Control
-                type="text"
-                placeholder="Subject"
-                value={subject}
-                onChange={ (e) => setSubject(e.target.value) }
-              />
-            </Col>
-          </Row>
+            <Row className="mb-3">
+              <Col>
+                <Form.Control
+                  type="text"
+                  placeholder="Subject"
+                  value={subject}
+                  onChange={ (e) => setSubject(e.target.value) }
+                />
+              </Col>
+            </Row>
 
-          <Row className="mb-3">
-            <Col>
-              <Form.Control
-                as="textarea"
-                placeholder="Content"
-                style={{ height: '150px' }}
-                value={content}
-                onChange={ (e) => setContent(e.target.value) }
-              />
-            </Col>
-          </Row>
+            <Row className="mb-3">
+              <Col>
+                <Form.Control
+                  as="textarea"
+                  placeholder="Content"
+                  style={{ height: '150px' }}
+                  value={content}
+                  onChange={ (e) => setContent(e.target.value) }
+                />
+              </Col>
+            </Row>
+          </div>
 
           <Row className="mb-3">
             <Col>
@@ -158,6 +160,7 @@ export default function ContactMeContainer() {
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
                 onChange={ () => setRecaptchaValue(true) }
                 theme={appTheme}
+                key={appTheme}
               />
             </Col>
           </Row>
