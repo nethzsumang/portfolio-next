@@ -129,3 +129,6 @@ a {
 @import './tablets/index.scss';
 @import './pc/index.scss';
 @import 'react-vertical-timeline-component/style.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
