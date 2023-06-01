@@ -10,7 +10,8 @@ export default function handler(req, res) {
         since: '2023-06-02 00:00:00 UTC+0800',
         changes: [
           'Adjusted years of experience.',
-          'Removed unused i18n entries.'
+          'Removed unused i18n entries.',
+          'Added certificates.'
         ]
       },
       {

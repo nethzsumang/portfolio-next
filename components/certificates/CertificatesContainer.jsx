@@ -29,13 +29,19 @@ export default function CertificatesContainer() {
   function executeAction(index) {
     switch (index) {
       case 1:
-        window.open('https://www.coursera.org/account/accomplishments/certificate/FV3LJR58WYT7', '_blank');
+        window.open('https://courses.edx.org/certificates/dd5249b1eeb74832ab566db5b366aac8', '_blank');
         break;
       case 2:
         window.open('https://www.coursera.org/account/accomplishments/certificate/CRYQKRUNU4WW', '_blank');
         break;
       case 3:
-        window.open('https://courses.edx.org/certificates/dd5249b1eeb74832ab566db5b366aac8', '_blank');
+        window.open('https://www.coursera.org/account/accomplishments/certificate/FV3LJR58WYT7', '_blank');
+        break;
+      case 4:
+        window.open('https://www.udemy.com/certificate/UC-1fc816ce-cd58-4170-8378-86f5be9986af/', '_blank');
+        break;
+      case 5:
+        window.open('https://www.udemy.com/certificate/UC-7b5988a1-42fb-470e-8e7c-f3812b39962a/', '_blank');
         break;
     }
   }
@@ -47,7 +53,39 @@ export default function CertificatesContainer() {
         <ListGroup.Item
           className={containerStyle}
           action
-          onClick={() => executeAction(1)}
+          onClick={() => executeAction(5)}
+        >
+          <div className="certificates__certificate-container">
+            <div className="certificates__certificate-header">
+              <b>How to Run truly Productive Meetings - and add value</b>
+            </div>
+          </div>
+          <div className="mt-1">
+            Udemy
+          </div>
+          <small className={certificateDateStyle}>Issued May 2023</small>
+        </ListGroup.Item>
+
+        <ListGroup.Item
+          className={containerStyle}
+          action
+          onClick={() => executeAction(4)}
+        >
+          <div className="certificates__certificate-container">
+            <div className="certificates__certificate-header">
+              <b>Clean Code</b>
+            </div>
+          </div>
+          <div className="mt-1">
+            Udemy
+          </div>
+          <small className={certificateDateStyle}>Issued May 2023</small>
+        </ListGroup.Item>
+
+        <ListGroup.Item
+          className={containerStyle}
+          action
+          onClick={() => executeAction(3)}
         >
           <div className="certificates__certificate-container">
             <div className="certificates__certificate-header">
@@ -79,7 +117,7 @@ export default function CertificatesContainer() {
         <ListGroup.Item
           className={containerStyle}
           action
-          onClick={() => executeAction(3)}
+          onClick={() => executeAction(1)}
         >
           <div className="certificates__certificate-container">
             <div className="certificates__certificate-header">
