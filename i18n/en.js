@@ -17,16 +17,6 @@ export default {
     'HOME': {
       'DESCRIPTION': 'A full stack developer using Laravel and JavaScript.'
     },
-    'SKILLS': {
-      'HEADER': 'Skills',
-      'SKILL_1': 'Has a total of 4 years experience in web development, rom creating e-commerce applications to company\'s internal applications.',
-      'SKILL_2': 'Has 2 years experience developing apps for e-commerce websites, ranging from rewards, shipping information to tracking.',
-      'SKILL_3': 'Has 2 year experience developing an in-house information and management software that admins and employees used for viewing and managing various company-related information.',
-      'SKILL_4': 'Has 4 years experience using Laravel PHP framework for back-end and JavaScript frameworks, such as React and Vue, for front-end development.',
-      'SKILL_5': 'Helped design database structures for my team\’s apps.',
-      'SKILL_6': 'Has experience on creating unit tests.',
-      'SKILL_7': 'Has experience using Atlassian tools like Jira and Confluence in creating documentations.'
-    },
     'ACHIEVEMENTS': {
       'HEADER': 'Achievements',
       'UNIVERSITY': 'University',
@@ -67,10 +57,10 @@ export default {
     },
     'WHAT_I_DO': {
       'HEADER': 'What I Do',
-      'DESCRIPTION': 'I have 4 years of experience developing customer-facing web applications. Below are some of my technical skills.',
+      'DESCRIPTION': 'I have 5 years of experience developing customer-facing web applications. Below are some of my technical skills.',
       'WHAT_I_DO_1': '4 years experience in developing back-end web applications using PHP and Laravel.',
       'WHAT_I_DO_2': '4 years experience in creating normalized and optimized tables and queries for efficient web applications.',
-      'WHAT_I_DO_3': '4 years experience developing front-end modules using Vue, React, and plain Javascript.',
+      'WHAT_I_DO_3': '5 years experience developing front-end modules using Vue, React, and plain Javascript.',
       'WHAT_I_DO_4': 'Experienced in using Jira for task management in an Agile environment.',
       'WHAT_I_DO_5': 'Experienced in creating development plans and documentations for various projects.',
     },
