@@ -1,10 +1,17 @@
 export default function handler(req, res) {
   res.status(200).json({
-    version: '1.6.0',
-    since: '2023-06-07 17:00:00 UTC+0800',
+    version: '1.6.1',
+    since: '2023-06-07 17:05:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.6.1',
+        since: '2023-06-07 17:05:00 UTC+0800',
+        changes: [
+          'Fixed bold typing in linkedin link in resume.'
+        ]
+      },
       {
         version: '1.6.0',
         since: '2023-06-07 17:00:00 UTC+0800',
