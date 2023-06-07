@@ -30,9 +30,6 @@ export default function ProjectList() {
       case 1:
         alert('You are looking at it right now!');
         break;
-      case 2:
-        window.open('https://custom-dashboard.kennethsumang.com', '_blank');
-        break;
       case 3:
         window.open('https://www.npmjs.com/package/sapui5-helper', '_blank');
         break;
@@ -63,25 +60,6 @@ export default function ProjectList() {
           </div>
           <div className="mt-1">
             { t('PROJECTS.PROJECT_1_DESCRIPTION') }
-          </div>
-        </ListGroup.Item>
-
-        <ListGroup.Item
-          className={containerStyle}
-          action
-          onClick={() => executeAction(2)}
-        >
-          <div className="projects__project-container">
-            <div className="projects__project-header">
-              <b>Custom Dashboard App</b>
-            </div>
-            <div>
-              <LanguageBadge content="Vue" />
-              <LanguageBadge content="Javascript" />
-            </div>
-          </div>
-          <div className="mt-1">
-            { t('PROJECTS.PROJECT_2_DESCRIPTION') }
           </div>
         </ListGroup.Item>
 

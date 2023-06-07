@@ -15,7 +15,7 @@ export default {
       'CONTACT_ME': 'Contact Me',
     },
     'HOME': {
-      'DESCRIPTION': 'A full stack developer using Laravel and JavaScript.'
+      'DESCRIPTION': 'A web developer skilled in Laravel and JavaScript.'
     },
     'ACHIEVEMENTS': {
       'HEADER': 'Achievements',
@@ -58,8 +58,8 @@ export default {
     'WHAT_I_DO': {
       'HEADER': 'What I Do',
       'DESCRIPTION': 'I have 5 years of experience developing customer-facing web applications. Below are some of my technical skills.',
-      'WHAT_I_DO_1': '4 years experience in developing back-end web applications using PHP and Laravel.',
-      'WHAT_I_DO_2': '4 years experience in creating normalized and optimized tables and queries for efficient web applications.',
+      'WHAT_I_DO_1': '5 years experience in developing back-end web applications using PHP and Laravel.',
+      'WHAT_I_DO_2': '5 years experience in creating normalized and optimized tables and queries for efficient web applications.',
       'WHAT_I_DO_3': '5 years experience developing front-end modules using Vue, React, and plain Javascript.',
       'WHAT_I_DO_4': 'Experienced in using Jira for task management in an Agile environment.',
       'WHAT_I_DO_5': 'Experienced in creating development plans and documentations for various projects.',

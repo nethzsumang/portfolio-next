@@ -1,17 +1,26 @@
 export default function handler(req, res) {
   res.status(200).json({
-    version: '1.5.8',
-    since: '2023-06-02 00:00:00 UTC+0800',
+    version: '1.6.0',
+    since: '2023-06-07 17:00:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.6.0',
+        since: '2023-06-07 17:00:00 UTC+0800',
+        changes: [
+          'Removed unpolished project from list.',
+          'Adjusted years of experience.',
+          'Updated resume.',
+        ]
+      },
       {
         version: '1.5.8',
         since: '2023-06-02 00:00:00 UTC+0800',
         changes: [
           'Adjusted years of experience.',
           'Removed unused i18n entries.',
-          'Added certificates.'
+          'Added certificates.',
         ]
       },
       {
