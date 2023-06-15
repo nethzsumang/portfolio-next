@@ -63,7 +63,7 @@ export default function Timeline() {
             borderRadius: '20px' 
           }}
           contentArrowStyle={{ borderRight: '7px solid  ' + timeLineContainerColor }}
-          date="2018 - present"
+          date="2018 - 2023"
           iconStyle={{ background: timelineIconContainerColor, color: timelineFontColor }}
           icon={<i className="bi bi-briefcase timeline-icon"></i>}
         >

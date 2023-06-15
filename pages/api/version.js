@@ -1,10 +1,19 @@
 export default function handler(req, res) {
   res.status(200).json({
-    version: '1.6.1',
-    since: '2023-06-07 17:05:00 UTC+0800',
+    version: '1.7.0',
+    since: '2023-06-15 12:00:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.7.0',
+        since: '2023-06-15 12:00:00 UTC+0800',
+        changes: [
+          'Updated work experience end year for Cafe24 in resume.',
+          'Updated work experience end year for Cafe24 in history timeline.',
+          'Removed resume with years of experience.'
+        ]
+      },
       {
         version: '1.6.1',
         since: '2023-06-07 17:05:00 UTC+0800',
