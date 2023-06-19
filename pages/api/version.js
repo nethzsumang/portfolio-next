@@ -1,10 +1,17 @@
 export default function handler(req, res) {
   res.status(200).json({
-    version: '1.7.0',
-    since: '2023-06-15 12:00:00 UTC+0800',
+    version: '1.8.0',
+    since: '2023-06-19 18:15:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.8.0',
+        since: '2023-06-19 18:15:00 UTC+0800',
+        changes: [
+          'Update mobile number in resume.'
+        ]
+      },
       {
         version: '1.7.0',
         since: '2023-06-15 12:00:00 UTC+0800',
