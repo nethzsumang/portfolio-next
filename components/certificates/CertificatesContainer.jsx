@@ -12,6 +12,51 @@ export default function CertificatesContainer() {
   const [containerStyle, setContainerStyle] = useState('');
   const [certificateDateStyle, setCertificateDateStyle] = useState('');
 
+  const certificates = [
+    {
+      name: 'React.js Essential Training',
+      url: 'https://www.linkedin.com/learning/certificates/d9f89924e0452a3934f63f8c1c4d9cb5bdee3bf3cd53158439810d140279e70a',
+      issuer: 'LinkedIn Learning',
+      issuedAt: 'June 2023',
+    },
+    {
+      name: 'TypeScript Essential Training',
+      url: 'https://www.linkedin.com/learning/certificates/8fae98083879c65608b41d1b13c523cc7aa7a1c775cd0a3ddb066c38046987bf',
+      issuer: 'LinkedIn Learning',
+      issuedAt: 'June 2023',
+    },
+    {
+      name: 'How to Run truly Productive Meetings - and add value',
+      url: 'https://www.udemy.com/certificate/UC-7b5988a1-42fb-470e-8e7c-f3812b39962a/',
+      issuer: 'Udemy',
+      issuedAt: 'May 2023',
+    },
+    {
+      name: 'Clean Code',
+      url: 'https://www.udemy.com/certificate/UC-1fc816ce-cd58-4170-8378-86f5be9986af/',
+      issuer: 'Udemy',
+      issuedAt: 'May 2023',
+    },
+    {
+      name: 'Neural Networks and Deep Learning',
+      url: 'https://www.coursera.org/account/accomplishments/certificate/FV3LJR58WYT7',
+      issuer: 'DeepLearning.AI',
+      issuedAt: 'November 2020',
+    },
+    {
+      name: 'Machine Learning with Python',
+      url: 'https://www.coursera.org/account/accomplishments/certificate/CRYQKRUNU4WW',
+      issuer: 'IBM Skills Network',
+      issuedAt: 'August 2020',
+    },
+    {
+      name: 'PH125.8x: Data Science: Machine Learning',
+      url: 'https://courses.edx.org/certificates/dd5249b1eeb74832ab566db5b366aac8',
+      issuer: 'HarvardX',
+      issuedAt: 'June 2020',
+    },
+  ]
+
   useEffect(() => {
     if (appTheme === 'dark') {
       setContainerStyle('d-flex align-items-start flex-column __no-left-padding __dark-div');
@@ -22,114 +67,31 @@ export default function CertificatesContainer() {
     }
   }, [appTheme]);
 
-  /**
-   * Executes action based on project's index
-   * @param {number} index
-   */
-  function executeAction(index) {
-    switch (index) {
-      case 1:
-        window.open('https://courses.edx.org/certificates/dd5249b1eeb74832ab566db5b366aac8', '_blank');
-        break;
-      case 2:
-        window.open('https://www.coursera.org/account/accomplishments/certificate/CRYQKRUNU4WW', '_blank');
-        break;
-      case 3:
-        window.open('https://www.coursera.org/account/accomplishments/certificate/FV3LJR58WYT7', '_blank');
-        break;
-      case 4:
-        window.open('https://www.udemy.com/certificate/UC-1fc816ce-cd58-4170-8378-86f5be9986af/', '_blank');
-        break;
-      case 5:
-        window.open('https://www.udemy.com/certificate/UC-7b5988a1-42fb-470e-8e7c-f3812b39962a/', '_blank');
-        break;
-    }
-  }
-
   return (
-    <div>
+    <>
       <h3> Certificates </h3>
       <ListGroup className="mb-5 mt-3">
-        <ListGroup.Item
-          className={containerStyle}
-          action
-          onClick={() => executeAction(5)}
-        >
-          <div className="certificates__certificate-container">
-            <div className="certificates__certificate-header">
-              <b>How to Run truly Productive Meetings - and add value</b>
-            </div>
-          </div>
-          <div className="mt-1">
-            Udemy
-          </div>
-          <small className={certificateDateStyle}>Issued May 2023</small>
-        </ListGroup.Item>
-
-        <ListGroup.Item
-          className={containerStyle}
-          action
-          onClick={() => executeAction(4)}
-        >
-          <div className="certificates__certificate-container">
-            <div className="certificates__certificate-header">
-              <b>Clean Code</b>
-            </div>
-          </div>
-          <div className="mt-1">
-            Udemy
-          </div>
-          <small className={certificateDateStyle}>Issued May 2023</small>
-        </ListGroup.Item>
-
-        <ListGroup.Item
-          className={containerStyle}
-          action
-          onClick={() => executeAction(3)}
-        >
-          <div className="certificates__certificate-container">
-            <div className="certificates__certificate-header">
-              <b>Neural Networks and Deep Learning</b>
-            </div>
-          </div>
-          <div className="mt-1">
-            DeepLearning.AI
-          </div>
-          <small className={certificateDateStyle}>Issued November 2020</small>
-        </ListGroup.Item>
-
-        <ListGroup.Item
-          className={containerStyle}
-          action
-          onClick={() => executeAction(2)}
-        >
-          <div className="certificates__certificate-container">
-            <div className="certificates__certificate-header">
-              <b>Machine Learning with Python</b>
-            </div>
-          </div>
-          <div className="mt-1">
-            IBM Skills Network
-          </div>
-          <small className={certificateDateStyle}>Issued August 2020</small>
-        </ListGroup.Item>
-
-        <ListGroup.Item
-          className={containerStyle}
-          action
-          onClick={() => executeAction(1)}
-        >
-          <div className="certificates__certificate-container">
-            <div className="certificates__certificate-header">
-              <b>PH125.8x: Data Science: Machine Learning</b>
-            </div>
-          </div>
-          <div className="mt-1">
-            HarvardX
-          </div>
-          <small className={certificateDateStyle}>Issued June 2020</small>
-        </ListGroup.Item>
+        {
+          certificates.map((certificate) => {
+            return (
+              <ListGroup.Item
+                key={certificate.name}
+                className={containerStyle}
+                action
+                onClick={ () => window.open(certificate.url, '_blank') }
+              >
+                <div className="certificates__certificate-container" key={certificate.name}>
+                  <div className="certificates__certificate-header" key={certificate.name}>
+                    <b key={certificate.name}>{certificate.name}</b>
+                  </div>
+                </div>
+                <div className="mt-1" key={certificate.name}>{certificate.issuer}</div>
+                <small className={certificateDateStyle} key={certificate.name}>Issued {certificate.issuedAt}</small>
+              </ListGroup.Item>
+            );
+          })
+        }
       </ListGroup>
-    </div>
+    </>
   );
 }
