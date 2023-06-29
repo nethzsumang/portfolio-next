@@ -84,7 +84,7 @@ export default {
       'HISTORY_1_1': 'Developed an app that monitors, displays and processes the time-in and time-out of an employee and computes their gross salary.',
     },
     'CONTACT_ME': {
-      'CONTACT_TEXT': 'Please fill out this form and I will answer as soon as possible.',
+      'CONTACT_TEXT': 'Fill out this form and I will answer as soon as possible.',
     }
   }
 };

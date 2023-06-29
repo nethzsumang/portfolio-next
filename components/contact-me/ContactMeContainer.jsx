@@ -6,6 +6,8 @@ import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import ReCAPTCHA from 'react-google-recaptcha';
+import ReachOutContainer from "./ReachOutContainer";
+import HorizontalRuleWithText from "./HorizontalRuleWithText";
 
 /**
  * Contact Me Container page
@@ -104,7 +106,11 @@ export default function ContactMeContainer() {
 
   return (
     <div>
-      <h3> Contact Me </h3>
+      <h3 className="pb-3"> Contact Me </h3>
+      <div className="col-md-6 col-sm-12">
+        <ReachOutContainer />
+        <HorizontalRuleWithText text="OR" />
+      </div>
       <p>{ t('CONTACT_ME.CONTACT_TEXT') }</p>
       <div className="col-md-6 col-sm-12">
         <Form>
