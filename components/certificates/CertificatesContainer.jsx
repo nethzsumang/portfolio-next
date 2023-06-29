@@ -80,13 +80,13 @@ export default function CertificatesContainer() {
                 action
                 onClick={ () => window.open(certificate.url, '_blank') }
               >
-                <div className="certificates__certificate-container" key={certificate.name}>
-                  <div className="certificates__certificate-header" key={certificate.name}>
-                    <b key={certificate.name}>{certificate.name}</b>
+                <div className="certificates__certificate-container">
+                  <div className="certificates__certificate-header">
+                    <b>{certificate.name}</b>
                   </div>
                 </div>
-                <div className="mt-1" key={certificate.name}>{certificate.issuer}</div>
-                <small className={certificateDateStyle} key={certificate.name}>Issued {certificate.issuedAt}</small>
+                <div className="mt-1">{certificate.issuer}</div>
+                <small className={certificateDateStyle}>Issued {certificate.issuedAt}</small>
               </ListGroup.Item>
             );
           })
