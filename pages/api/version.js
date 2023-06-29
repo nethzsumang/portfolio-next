@@ -1,10 +1,17 @@
 export default function handler(req, res) {
   res.status(200).json({
-    version: '1.10.0',
-    since: '2023-06-29 17:00:00 UTC+0800',
+    version: '1.10.1',
+    since: '2023-06-29 20:40:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.10.1',
+        since: '2023-06-29 20:40:00 UTC+0800',
+        changes: [
+          'Fixed envelope icon not seen in dark mode.',
+        ]
+      },
       {
         version: '1.10.0',
         since: '2023-06-29 17:00:00 UTC+0800',

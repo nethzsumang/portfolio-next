@@ -124,8 +124,14 @@ a {
   color: #ccc !important;
 }
 
-.contact-me__reach-out__logos {
-  margin-right: 0.75rem;
+.contact-me__reach-out__logo-container {
+  gap: 1rem;
+}
+
+.contact-me__reach-out__mail {
+  font-size: 24px;
+  display: block;
+  padding-bottom: 12px;
 }
 
 @import 'bootstrap/dist/css/bootstrap.min.css';
@@ -133,3 +139,4 @@ a {
 @import './tablets/index.scss';
 @import './pc/index.scss';
 @import 'react-vertical-timeline-component/style.min.css';
+@import 'bootstrap-icons';
