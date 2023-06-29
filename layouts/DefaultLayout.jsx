@@ -116,7 +116,7 @@ export default function DefaultLayout ({ children }) {
 
   return (
     <div className={appTheme === 'dark' ? 'd-flex flex-column h-100 __dark-div' : 'd-flex flex-column h-100'}>
-      <Navbar bg={appTheme} variant={appTheme} expand="lg" >
+      <Navbar bg={appTheme} variant={appTheme} expand="lg" collapseOnSelect={true} >
         <Container>
           <Navbar.Brand href="#home">
             { t('APP_TITLE') }
