@@ -1,4 +1,11 @@
-export default function handler(req, res) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+/**
+ * Application version API
+ * @param {NextApiRequest} req
+ * @param{NextApiResponse} res
+ */
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
     version: '1.10.1',
     since: '2023-06-29 20:40:00 UTC+0800',

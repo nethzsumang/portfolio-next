@@ -5,20 +5,21 @@ import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/router';
 import DarkModeToggle from 'react-dark-mode-toggle';
 import { changeAppTheme, changeLang } from '../store/slices/appSlice';
+import type { RootState } from '../store';
 
 /**
  * DefaultLayout component
  * @author Kenneth Sumang
  */
 export default function DefaultLayout ({ children }) {
-  const appTheme = useSelector(state => state.app.appTheme);
+  const appTheme = useSelector((state: RootState) => state.app.appTheme);
   const [appVersion, setAppVersion] = useState('');
   const { t, i18n } = useTranslation();
   const router = useRouter();
   const dispatch = useDispatch();
 
-  useEffect(async () => {
-    await getAppVersion();
+  useEffect(() => {
+    getAppVersion();
     if (window !== undefined) {
       if (appTheme === null) {
         const storageAppTheme = window.localStorage.getItem('portfolio-app-theme') ?? 'light';
@@ -27,14 +28,14 @@ export default function DefaultLayout ({ children }) {
 
       const lang = 'en';
       dispatch(changeLang(lang));
-      await i18n.changeLanguage(lang);
+      i18n.changeLanguage(lang);
     }
   }, []);
 
   useEffect(() => {
     // fix for white div on the index page
     if (router.pathname === '/') {
-      document.querySelectorAll('main div').forEach((element) => {
+      document.querySelectorAll('main div').forEach((element: HTMLElement) => {
         element.style.height = '100%';
         element.style.minHeight = '100%';
       });
@@ -44,11 +45,11 @@ export default function DefaultLayout ({ children }) {
     if (pathSetMaxHeight.includes(router.pathname) === true) {
       document.querySelector('html').style.height = '100%';
       document.querySelector('body').style.height = '100%';
-      document.querySelector('#__next').style.height = '100%';
+      (document.querySelector('#__next') as HTMLElement).style.height = '100%';
     } else {
       document.querySelector('html').style.height = '';
       document.querySelector('body').style.height = '';
-      document.querySelector('#__next').style.height = '';
+      (document.querySelector('#__next') as HTMLElement).style.height = '';
     }
   }, [router.pathname]);
 

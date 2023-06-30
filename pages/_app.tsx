@@ -11,16 +11,18 @@ import { Analytics } from '@vercel/analytics/react';
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <SSRProvider>
-    <Provider store={store}>
-      <DefaultLayout>
-        <Head>
-          <title>Kenneth Sumang | Web Developer</title>
-        </Head>
-        <Component {...pageProps} />
-        <Analytics />
-      </DefaultLayout>
-    </Provider>
-    </SSRProvider>
+    <>
+      <SSRProvider>
+      <Provider store={store}>
+        <DefaultLayout>
+          <Head>
+            <title>Kenneth Sumang | Web Developer</title>
+          </Head>
+          <Component {...pageProps} />
+          <Analytics />
+        </DefaultLayout>
+      </Provider>
+      </SSRProvider>
+    </>
   );
 }

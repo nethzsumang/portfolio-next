@@ -1,3 +1,5 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+
 /**
  * Verifies recaptcha
  * @param req
@@ -6,7 +8,7 @@
  * @author Kenneth Sumang
  * @since  2023.04.07
  */
-export default async function VerifyCaptcha(req, res) {
+export default async function VerifyCaptcha(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(404).json({
       error: {
