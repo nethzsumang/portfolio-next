@@ -1,10 +1,20 @@
 import Image from 'next/image';
+import {useEffect, useState} from 'react';
+import { useSelector } from 'react-redux';
+import type { RootState } from '../../store';
 
 /**
  * ReachOutContainer component
  * @author Kenneth Sumang
  */
 export default function ReachOutContainer() {
+  const appTheme = useSelector((state: RootState) => state.app.appTheme);
+  const [githubImgSrc, setGithubImgSrc] = useState('/images/github-icon-light.svg');
+
+  useEffect(() => {
+    setGithubImgSrc(`/images/github-icon-${appTheme}.svg`);
+  }, [appTheme]);
+
   return (
     <>
       <p>You can reach out to me in these channels.</p>
@@ -14,6 +24,13 @@ export default function ReachOutContainer() {
             src="/images/linkedin-icon.png"
             height={22}
             width={28}
+          />
+        </a>
+        <a href="https://github.com/nethzsumang" target="_blank">
+          <Image
+            src={githubImgSrc}
+            height={22}
+            width={22}
           />
         </a>
         <a href="viber://add?number=%2B639665636420" target="_blank">
