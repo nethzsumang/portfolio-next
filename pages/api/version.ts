@@ -7,11 +7,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
  */
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
-    version: '1.10.2',
-    since: '2023-06-30 12:10:00 UTC+0800',
+    version: '1.10.3',
+    since: '2023-06-30 19:10:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.10.3',
+        since: '2023-06-30 19:10:00 UTC+0800',
+        changes: [
+          'Added Github in Reach Out section.',
+          'Fixed Recaptcha Validation.',
+        ]
+      },
       {
         version: '1.10.2',
         since: '2023-06-30 12:10:00 UTC+0800',
