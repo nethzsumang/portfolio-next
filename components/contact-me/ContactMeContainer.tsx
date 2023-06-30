@@ -6,8 +6,9 @@ import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import ReCAPTCHA from 'react-google-recaptcha';
-import ReachOutContainer from "./ReachOutContainer";
-import HorizontalRuleWithText from "./HorizontalRuleWithText";
+import ReachOutContainer from './ReachOutContainer';
+import HorizontalRuleWithText from './HorizontalRuleWithText';
+import type { RootState } from '../../store';
 
 /**
  * Contact Me Container page
@@ -16,7 +17,7 @@ import HorizontalRuleWithText from "./HorizontalRuleWithText";
  */
 export default function ContactMeContainer() {
   const { t } = useTranslation();
-  const appTheme = useSelector(state => state.app.appTheme);
+  const appTheme = useSelector((state: RootState) => state.app.appTheme);
   const [ name, setName ] = useState('');
   const [ email, setEmail ] = useState('');
   const [ subject, setSubject ] = useState('');

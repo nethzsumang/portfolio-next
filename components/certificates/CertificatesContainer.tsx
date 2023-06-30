@@ -1,6 +1,17 @@
 import { ListGroup } from 'react-bootstrap';
-import {useSelector} from "react-redux";
-import {useEffect, useState} from 'react';
+import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
+import type { RootState } from '../../store';
+
+/**
+ * CertificateInfo structure
+ */
+interface CertificateInfo {
+  name: string;
+  url: string;
+  issuer: string;
+  issuedAt: string;
+}
 
 /**
  * CertificatesContainer component
@@ -8,11 +19,11 @@ import {useEffect, useState} from 'react';
  * @since  2023.03.23
  */
 export default function CertificatesContainer() {
-  const appTheme = useSelector(state => state.app.appTheme);
+  const appTheme = useSelector((state: RootState) => state.app.appTheme);
   const [containerStyle, setContainerStyle] = useState('');
   const [certificateDateStyle, setCertificateDateStyle] = useState('');
 
-  const certificates = [
+  const certificates: CertificateInfo[] = [
     {
       name: 'React.js Essential Training',
       url: 'https://www.linkedin.com/learning/certificates/d9f89924e0452a3934f63f8c1c4d9cb5bdee3bf3cd53158439810d140279e70a',

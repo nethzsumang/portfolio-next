@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import TechnicalSkillCard from './technical-skills/TechnicalSkillCard';
 import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
+import type { RootState } from '../../store';
 
 /**
  * WhatIDoSection component
@@ -9,7 +10,7 @@ import { useEffect, useState } from 'react';
  */
 export default function WhatIDoSection () {
   const { t } = useTranslation();
-  const appTheme = useSelector(state => state.app.appTheme);
+  const appTheme = useSelector((state: RootState) => state.app.appTheme);
   const [jiraLogoUrl, setJiraLogoUrl] = useState('/images/jira-icon-light.png');
   const [confluenceLogoUrl, setConfluenceLogoUrl] = useState('/images/confluence-icon-light.png');
 
