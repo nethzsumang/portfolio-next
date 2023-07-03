@@ -26,13 +26,13 @@
     "react-responsive": "^9.0.0-beta.6",
     "react-show-more-button": "^1.0.0",
     "react-vertical-timeline-component": "^3.5.2",
-    "react-world-flags": "^1.4.0",
     "redux": "^4.1.2",
     "sass": "^1.49.9"
   },
   "devDependencies": {
     "@types/node": "^20.3.2",
     "@types/react": "^17.0.2",
+    "@types/react-bootstrap": "^0.32.32",
     "eslint": "8.9.0",
     "eslint-config-next": "12.1.0",
     "eslint-plugin-react": "7.29.1",
