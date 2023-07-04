@@ -33,7 +33,7 @@ export default function ReachOutContainer() {
             width={22}
           />
         </a>
-        <a href="viber://add?number=%2B639665636420" target="_blank">
+        <a href="viber://add?number=%2B639292061793" target="_blank">
           <Image
             src="/images/viber-icon.svg"
             height={24}
