@@ -25,6 +25,12 @@ export default function CertificatesContainer() {
 
   const certificates: CertificateInfo[] = [
     {
+      name: 'Learning Next.js',
+      url: 'https://www.linkedin.com/learning/certificates/bb536673fb939f19a6e50ab3f0a9b91c548965ed5dbf9522b83630b04b0981a0',
+      issuer: 'LinkedIn Learning',
+      issuedAt: 'July 2023',
+    },
+    {
       name: 'React.js Essential Training',
       url: 'https://www.linkedin.com/learning/certificates/d9f89924e0452a3934f63f8c1c4d9cb5bdee3bf3cd53158439810d140279e70a',
       issuer: 'LinkedIn Learning',

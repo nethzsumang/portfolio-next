@@ -7,11 +7,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
  */
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
-    version: '1.10.5',
-    since: '2023-07-04 11:00:00 UTC+0800',
+    version: '1.11.0',
+    since: '2023-07-04 21:40:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.11.0',
+        since: '2023-07-04 21:40:00 UTC+0800',
+        changes: [
+          'Added Next.js certificate.',
+        ]
+      },
       {
         version: '1.10.5',
         since: '2023-07-04 11:00:00 UTC+0800',
