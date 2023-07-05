@@ -20,7 +20,8 @@ export default async function VerifyCaptcha(req: NextApiRequest, res: NextApiRes
   }
 
   const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
-  let recaptchaToken = req.body.token;
+  const requestBody = JSON.parse(req.body);
+  let recaptchaToken = requestBody.token;
 
   if (!recaptchaToken) {
     res

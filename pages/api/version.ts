@@ -7,11 +7,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
  */
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
-    version: '1.11.0',
-    since: '2023-07-04 21:40:00 UTC+0800',
+    version: '1.11.1',
+    since: '2023-07-05 12:45:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.11.1',
+        since: '2023-07-05 12:45:00 UTC+0800',
+        changes: [
+          'Fixed verification failed on Contact Me form submit.',
+        ]
+      },
       {
         version: '1.11.0',
         since: '2023-07-04 21:40:00 UTC+0800',
