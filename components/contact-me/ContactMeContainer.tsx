@@ -9,6 +9,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import ReachOutContainer from './ReachOutContainer';
 import HorizontalRuleWithText from './HorizontalRuleWithText';
 import type { RootState } from '../../store';
+import * as EmailValidator from 'email-validator';
 
 /**
  * Contact Me Container page
@@ -56,6 +57,12 @@ export default function ContactMeContainer() {
 
     if (name.length === 0 || email.length === 0 || subject.length === 0 || content.length === 0) {
       alert('You are missing some of the form\'s data. Please check your submission and try again.');
+      setIsProcessing(false);
+      return;
+    }
+
+    if (!EmailValidator.validate(email)) {
+      alert('You have entered an invalid email address. Please check your submission and try again.');
       setIsProcessing(false);
       return;
     }
