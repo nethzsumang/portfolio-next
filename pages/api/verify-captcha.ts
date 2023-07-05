@@ -40,7 +40,7 @@ export default async function VerifyCaptcha(req: NextApiRequest, res: NextApiRes
 
   try {
     const data = await fetch(
-      `https://www.google.com/recaptcha/api/siteverify?secret=${recaptchaSecret}&response=${recaptchaToken}`,
+      `https://www.google.com/recaptcha/api/siteverify`,
       {
         method: 'POST',
         body: JSON.stringify({
