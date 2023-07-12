@@ -4,7 +4,7 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/router';
 import DarkModeToggle from 'react-dark-mode-toggle';
-import { changeAppTheme, changeLang } from '../store/slices/appSlice';
+import { changeAppTheme } from '../store/slices/appSlice';
 import type { RootState } from '../store';
 
 /**
@@ -30,10 +30,6 @@ export default function DefaultLayout ({ children }) {
         document.documentElement.setAttribute('data-theme', theme);
         dispatch(changeAppTheme(theme));
       }
-
-      const lang = 'en';
-      dispatch(changeLang(lang));
-      i18n.changeLanguage(lang);
     }
   }, []);
 
