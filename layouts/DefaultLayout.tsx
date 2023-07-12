@@ -8,6 +8,14 @@ import { changeAppTheme } from '../store/slices/appSlice';
 import type { RootState } from '../store';
 
 /**
+ * RouteInfo structure
+ */
+interface RouteInfo {
+  link: string;
+  title: string;
+}
+
+/**
  * DefaultLayout component
  * @author Kenneth Sumang
  */
@@ -17,6 +25,33 @@ export default function DefaultLayout ({ children }) {
   const { t, i18n } = useTranslation();
   const router = useRouter();
   const dispatch = useDispatch();
+
+  const routes: RouteInfo[] = [
+    {
+      link: '/',
+      title: t('NAV.HOME'),
+    },
+    {
+      link: '/history',
+      title: t('NAV.HISTORY'),
+    },
+    {
+      link: '/projects',
+      title: t('NAV.PROJECTS'),
+    },
+    {
+      link: '/articles',
+      title: t('NAV.ARTICLES'),
+    },
+    {
+      link: '/certificates',
+      title: t('NAV.CERTIFICATES'),
+    },
+    {
+      link: '/contact-me',
+      title: t('NAV.CONTACT_ME'),
+    },
+  ];
 
   useEffect(() => {
     getAppVersion();
@@ -119,53 +154,20 @@ export default function DefaultLayout ({ children }) {
           
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link
-                href="/"
-                onClick={event => navigate(event, "/")}
-                active={isNavActive("/")}
-              >
-                { t('NAV.HOME') }
-              </Nav.Link>
-
-              <Nav.Link
-                href="/history"
-                onClick={event => navigate(event, "/history")}
-                active={isNavActive("/history")}
-              >
-                { t('NAV.HISTORY' )}
-              </Nav.Link>
-
-              <Nav.Link
-                href="/projects"
-                onClick={event => navigate(event, "/projects")}
-                active={isNavActive("/projects")}
-              >
-                { t('NAV.PROJECTS' )}
-              </Nav.Link>
-
-              <Nav.Link
-                href="/articles"
-                onClick={event => navigate(event, "/articles")}
-                active={isNavActive("/articles")}
-              >
-                { t('NAV.ARTICLES' )}
-              </Nav.Link>
-
-              <Nav.Link
-                href="/certificates"
-                onClick={event => navigate(event, "/certificates")}
-                active={isNavActive("/certificates")}
-              >
-                { t('NAV.CERTIFICATES' )}
-              </Nav.Link>
-
-              <Nav.Link
-                href="/contact-me"
-                onClick={event => navigate(event, "/contact-me")}
-                active={isNavActive("/contact-me")}
-              >
-                { t('NAV.CONTACT_ME' )}
-              </Nav.Link>
+              {
+                routes.map((route: RouteInfo) => {
+                  return (
+                    <Nav.Link
+                      key={route.link}
+                      href={route.link}
+                      onClick={(event) => navigate(event, route.link)}
+                      active={isNavActive(route.link)}
+                    >
+                      { route.title }
+                    </Nav.Link>
+                  );
+                })
+              }
             </Nav>
 
             <Nav className="__dark-mode-toggle-nav">
