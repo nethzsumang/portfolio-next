@@ -1,14 +1,27 @@
+import React from 'react';
 import { Card } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import Image from 'next/image';
+import type { RootState } from '../../../store';
+
+/**
+ * TechnicalSkillCardProps structure
+ */
+interface TechnicalSkillCardProps {
+  iconSrc: string;
+  height?: number;
+  width?: number;
+  header: string;
+  children?: React.ReactNode;
+}
 
 /**
  * TechnicalSkillCard component
  * @author Kenneth Sumang
  */
-function TechnicalSkillCard (props) {
-  const appTheme = useSelector(state => state.app.appTheme);
+function TechnicalSkillCard (props: TechnicalSkillCardProps) {
+  const appTheme = useSelector((state: RootState) => state.app.appTheme);
 
   return (
     <div className="technical-skills__card">

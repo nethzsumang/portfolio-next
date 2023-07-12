@@ -4,13 +4,14 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import { useTranslation } from 'react-i18next';
 import ShowMore from 'react-show-more-button';
 import LanguageBadge from '../projects/LanguageBadge';
+import type { RootState } from '../../store';
 
 /**
  * Timeline component
  * @author Kenneth Sumang
  */
 export default function Timeline() {
-  const appTheme = useSelector(state => state.app.appTheme);
+  const appTheme = useSelector((state: RootState) => state.app.appTheme);
   const { t } = useTranslation();
   const [showMoreText, setShowMoreText] = useState('Show More');
   const [timelineLineColor, setTimelineLineColor] = useState('#cccccc');
@@ -63,7 +64,7 @@ export default function Timeline() {
             borderRadius: '20px' 
           }}
           contentArrowStyle={{ borderRight: '7px solid  ' + timeLineContainerColor }}
-          date="2018 - present"
+          date="2018 - 2023"
           iconStyle={{ background: timelineIconContainerColor, color: timelineFontColor }}
           icon={<i className="bi bi-briefcase timeline-icon"></i>}
         >

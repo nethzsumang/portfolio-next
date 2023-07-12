@@ -124,8 +124,19 @@ a {
   color: #ccc !important;
 }
 
+.contact-me__reach-out__logo-container {
+  gap: 1rem;
+}
+
+.contact-me__reach-out__mail {
+  font-size: 24px;
+  display: block;
+  padding-bottom: 10px;
+}
+
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import './mobile/index.scss';
 @import './tablets/index.scss';
 @import './pc/index.scss';
 @import 'react-vertical-timeline-component/style.min.css';
+@import 'bootstrap-icons';

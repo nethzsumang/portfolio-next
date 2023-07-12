@@ -1,10 +1,133 @@
-export default function handler(req, res) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+/**
+ * Application version API
+ * @param {NextApiRequest} req
+ * @param{NextApiResponse} res
+ */
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
-    version: '1.5.7',
-    since: '2023-04-09 00:05:00 UTC+0800',
+    version: '1.12.0',
+    since: '2023-07-05 13:00:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.12.0',
+        since: '2023-07-05 13:00:00 UTC+0800',
+        changes: [
+          'Added email validation.',
+        ]
+      },
+      {
+        version: '1.11.1',
+        since: '2023-07-05 12:45:00 UTC+0800',
+        changes: [
+          'Fixed verification failed on Contact Me form submit.',
+        ]
+      },
+      {
+        version: '1.11.0',
+        since: '2023-07-04 21:40:00 UTC+0800',
+        changes: [
+          'Added Next.js certificate.',
+        ]
+      },
+      {
+        version: '1.10.5',
+        since: '2023-07-04 11:00:00 UTC+0800',
+        changes: [
+          'Updated resume.',
+          'Updated Viber link.',
+        ]
+      },
+      {
+        version: '1.10.4',
+        since: '2023-07-03 18:00:00 UTC+0800',
+        changes: [
+          'Fixed TypeScript issues.',
+        ]
+      },
+      {
+        version: '1.10.3',
+        since: '2023-06-30 19:10:00 UTC+0800',
+        changes: [
+          'Added Github in Reach Out section.',
+          'Fixed Recaptcha Validation.',
+        ]
+      },
+      {
+        version: '1.10.2',
+        since: '2023-06-30 12:10:00 UTC+0800',
+        changes: [
+          'Converted Javascript to Typescript.',
+          'Fix some lint issues.',
+        ]
+      },
+      {
+        version: '1.10.1',
+        since: '2023-06-29 20:40:00 UTC+0800',
+        changes: [
+          'Fixed envelope icon not seen in dark mode.',
+        ]
+      },
+      {
+        version: '1.10.0',
+        since: '2023-06-29 17:00:00 UTC+0800',
+        changes: [
+          'Updated resume.',
+          'Provided links in Contact Me page.',
+        ]
+      },
+      {
+        version: '1.9.0',
+        since: '2023-06-21 18:00:00 UTC+0800',
+        changes: [
+          'Add certificates.',
+          'Refactor certificate handling.'
+        ]
+      },
+      {
+        version: '1.8.0',
+        since: '2023-06-19 18:15:00 UTC+0800',
+        changes: [
+          'Update mobile number in resume.'
+        ]
+      },
+      {
+        version: '1.7.0',
+        since: '2023-06-15 12:00:00 UTC+0800',
+        changes: [
+          'Updated work experience end year for Cafe24 in resume.',
+          'Updated work experience end year for Cafe24 in history timeline.',
+          'Removed resume with years of experience.'
+        ]
+      },
+      {
+        version: '1.6.1',
+        since: '2023-06-07 17:05:00 UTC+0800',
+        changes: [
+          'Fixed bold typing in linkedin link in resume.'
+        ]
+      },
+      {
+        version: '1.6.0',
+        since: '2023-06-07 17:00:00 UTC+0800',
+        changes: [
+          'Removed unpolished project from list.',
+          'Adjusted years of experience.',
+          'Updated resume.',
+        ]
+      },
+      {
+        version: '1.5.8',
+        since: '2023-06-02 00:00:00 UTC+0800',
+        changes: [
+          'Adjusted years of experience.',
+          'Removed unused i18n entries.',
+          'Added certificates.',
+        ]
+      },
       {
         version: '1.5.7',
         since: '2023-04-09 00:05:00 UTC+0800',

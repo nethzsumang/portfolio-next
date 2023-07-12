@@ -6,6 +6,10 @@ import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import ReCAPTCHA from 'react-google-recaptcha';
+import ReachOutContainer from './ReachOutContainer';
+import HorizontalRuleWithText from './HorizontalRuleWithText';
+import type { RootState } from '../../store';
+import * as EmailValidator from 'email-validator';
 
 /**
  * Contact Me Container page
@@ -14,7 +18,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
  */
 export default function ContactMeContainer() {
   const { t } = useTranslation();
-  const appTheme = useSelector(state => state.app.appTheme);
+  const appTheme = useSelector((state: RootState) => state.app.appTheme);
   const [ name, setName ] = useState('');
   const [ email, setEmail ] = useState('');
   const [ subject, setSubject ] = useState('');
@@ -53,6 +57,12 @@ export default function ContactMeContainer() {
 
     if (name.length === 0 || email.length === 0 || subject.length === 0 || content.length === 0) {
       alert('You are missing some of the form\'s data. Please check your submission and try again.');
+      setIsProcessing(false);
+      return;
+    }
+
+    if (!EmailValidator.validate(email)) {
+      alert('You have entered an invalid email address. Please check your submission and try again.');
       setIsProcessing(false);
       return;
     }
@@ -104,7 +114,11 @@ export default function ContactMeContainer() {
 
   return (
     <div>
-      <h3> Contact Me </h3>
+      <h3 className="pb-3"> Contact Me </h3>
+      <div className="col-md-6 col-sm-12">
+        <ReachOutContainer />
+        <HorizontalRuleWithText text="OR" />
+      </div>
       <p>{ t('CONTACT_ME.CONTACT_TEXT') }</p>
       <div className="col-md-6 col-sm-12">
         <Form>

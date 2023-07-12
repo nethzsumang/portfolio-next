@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.2",
+    "@vercel/analytics": "^1.0.1",
     "bootstrap": "^5.3.0-alpha3",
     "bootstrap-icons": "^1.8.1",
+    "email-validator": "^2.0.4",
     "i18next": "^21.6.12",
     "next": "12.1.0",
     "prop-types": "^15.8.1",
@@ -25,13 +27,17 @@
     "react-responsive": "^9.0.0-beta.6",
     "react-show-more-button": "^1.0.0",
     "react-vertical-timeline-component": "^3.5.2",
-    "react-world-flags": "^1.4.0",
     "redux": "^4.1.2",
     "sass": "^1.49.9"
   },
   "devDependencies": {
+    "@types/node": "^20.3.2",
+    "@types/react": "^17.0.2",
+    "@types/react-bootstrap": "^0.32.32",
+    "@types/react-dom": "^18.2.6",
     "eslint": "8.9.0",
     "eslint-config-next": "12.1.0",
-    "eslint-plugin-react": "7.29.1"
+    "eslint-plugin-react": "7.29.1",
+    "typescript": "^5.1.6"
   }
 }

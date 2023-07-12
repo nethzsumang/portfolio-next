@@ -1,6 +1,7 @@
 import {useSelector} from 'react-redux';
 import {useEffect, useState} from 'react';
 import CertificatesContainer from '../components/certificates/CertificatesContainer';
+import type { RootState } from '../store';
 
 /**
  * Certificates page
@@ -8,7 +9,7 @@ import CertificatesContainer from '../components/certificates/CertificatesContai
  * @since  2023.03.23
  */
 export default function Certificates() {
-  const appTheme = useSelector(state => state.app.appTheme);
+  const appTheme = useSelector((state: RootState) => state.app.appTheme);
   const [containerStyle, setContainerStyle] = useState('');
 
   useEffect(() => {
