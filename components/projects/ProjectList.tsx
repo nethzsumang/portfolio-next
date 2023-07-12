@@ -18,16 +18,6 @@ interface ProjectDetail {
  */
 export default function ProjectList() {
   const { t } = useTranslation();
-  const appTheme = useSelector((state: RootState) => state.app.appTheme);
-  const [containerStyle, setContainerStyle] = useState('');
-
-  useEffect(() => {
-    if (appTheme === 'dark') {
-      setContainerStyle('d-flex align-items-start flex-column __no-left-padding __dark-div');
-    } else {
-      setContainerStyle('d-flex align-items-start flex-column __no-left-padding');
-    }
-  }, [appTheme]);
 
   const projects: ProjectDetail[] = [
     {
@@ -70,7 +60,7 @@ export default function ProjectList() {
             return (
               <ListGroup.Item
                 key={project.name}
-                className={containerStyle}
+                className="d-flex align-items-start flex-column __no-left-padding container__div"
                 action
                 onClick={() => project.onClick()}
               >

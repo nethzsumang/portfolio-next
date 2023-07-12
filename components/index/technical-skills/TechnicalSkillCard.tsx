@@ -26,9 +26,7 @@ function TechnicalSkillCard (props: TechnicalSkillCardProps) {
   return (
     <div className="technical-skills__card">
       <Card className="border-0">
-        <Card.Body
-          className={appTheme === 'dark' ? 'technical-skills__card__body __dark-div' : 'technical-skills__card__body'}
-        >
+        <Card.Body className="technical-skills__card__body container__div">
           <Card.Title>
             <Image
               src={props.iconSrc}

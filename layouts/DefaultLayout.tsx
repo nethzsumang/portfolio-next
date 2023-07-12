@@ -4,8 +4,16 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/router';
 import DarkModeToggle from 'react-dark-mode-toggle';
-import { changeAppTheme, changeLang } from '../store/slices/appSlice';
+import { changeAppTheme } from '../store/slices/appSlice';
 import type { RootState } from '../store';
+
+/**
+ * RouteInfo structure
+ */
+interface RouteInfo {
+  link: string;
+  title: string;
+}
 
 /**
  * DefaultLayout component
@@ -18,17 +26,45 @@ export default function DefaultLayout ({ children }) {
   const router = useRouter();
   const dispatch = useDispatch();
 
+  const routes: RouteInfo[] = [
+    {
+      link: '/',
+      title: t('NAV.HOME'),
+    },
+    {
+      link: '/history',
+      title: t('NAV.HISTORY'),
+    },
+    {
+      link: '/projects',
+      title: t('NAV.PROJECTS'),
+    },
+    {
+      link: '/articles',
+      title: t('NAV.ARTICLES'),
+    },
+    {
+      link: '/certificates',
+      title: t('NAV.CERTIFICATES'),
+    },
+    {
+      link: '/contact-me',
+      title: t('NAV.CONTACT_ME'),
+    },
+  ];
+
   useEffect(() => {
     getAppVersion();
     if (window !== undefined) {
       if (appTheme === null) {
-        const storageAppTheme = window.localStorage.getItem('portfolio-app-theme') ?? 'light';
-        dispatch(changeAppTheme(storageAppTheme));
+        const storageAppTheme = window.localStorage.getItem('portfolio-app-theme');
+        const themeFromMediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const theme = (!storageAppTheme)
+          ? themeFromMediaQuery
+          : storageAppTheme;
+        document.documentElement.setAttribute('data-theme', theme);
+        dispatch(changeAppTheme(theme));
       }
-
-      const lang = 'en';
-      dispatch(changeLang(lang));
-      i18n.changeLanguage(lang);
     }
   }, []);
 
@@ -85,17 +121,8 @@ export default function DefaultLayout ({ children }) {
   function onChangeThemeToggle(isDark) {
     const theme = isDark ? 'dark' : 'light';
     window.localStorage.setItem('portfolio-app-theme', theme);
+    document.documentElement.setAttribute('data-theme', theme);
     dispatch(changeAppTheme(theme));
-  }
-
-  /**
-   * Change language
-   * @param {string} langCode 
-   */
-  async function changeLanguageEvent(langCode) {
-    await i18n.changeLanguage(langCode);
-    window.localStorage.setItem('portfolio-lang', langCode);
-    dispatch(changeLang(langCode));
   }
 
   /**
@@ -116,7 +143,7 @@ export default function DefaultLayout ({ children }) {
   }
 
   return (
-    <div className={appTheme === 'dark' ? 'd-flex flex-column h-100 __dark-div' : 'd-flex flex-column h-100'}>
+    <div className='d-flex flex-column h-100 container__div'>
       <Navbar bg={appTheme} variant={appTheme} expand="lg" collapseOnSelect={true} >
         <Container>
           <Navbar.Brand href="#home">
@@ -127,53 +154,20 @@ export default function DefaultLayout ({ children }) {
           
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link
-                href="/"
-                onClick={event => navigate(event, "/")}
-                active={isNavActive("/")}
-              >
-                { t('NAV.HOME') }
-              </Nav.Link>
-
-              <Nav.Link
-                href="/history"
-                onClick={event => navigate(event, "/history")}
-                active={isNavActive("/history")}
-              >
-                { t('NAV.HISTORY' )}
-              </Nav.Link>
-
-              <Nav.Link
-                href="/projects"
-                onClick={event => navigate(event, "/projects")}
-                active={isNavActive("/projects")}
-              >
-                { t('NAV.PROJECTS' )}
-              </Nav.Link>
-
-              <Nav.Link
-                href="/articles"
-                onClick={event => navigate(event, "/articles")}
-                active={isNavActive("/articles")}
-              >
-                { t('NAV.ARTICLES' )}
-              </Nav.Link>
-
-              <Nav.Link
-                href="/certificates"
-                onClick={event => navigate(event, "/certificates")}
-                active={isNavActive("/certificates")}
-              >
-                { t('NAV.CERTIFICATES' )}
-              </Nav.Link>
-
-              <Nav.Link
-                href="/contact-me"
-                onClick={event => navigate(event, "/contact-me")}
-                active={isNavActive("/contact-me")}
-              >
-                { t('NAV.CONTACT_ME' )}
-              </Nav.Link>
+              {
+                routes.map((route: RouteInfo) => {
+                  return (
+                    <Nav.Link
+                      key={route.link}
+                      href={route.link}
+                      onClick={(event) => navigate(event, route.link)}
+                      active={isNavActive(route.link)}
+                    >
+                      { route.title }
+                    </Nav.Link>
+                  );
+                })
+              }
             </Nav>
 
             <Nav className="__dark-mode-toggle-nav">
@@ -188,7 +182,7 @@ export default function DefaultLayout ({ children }) {
       </Navbar>
       <main>{children}</main>
 
-      <footer className={appTheme === 'dark' ? "d-flex flex-column pt-2 pb-2 footer __dark-div" : "d-flex flex-column pt-2 pb-2 footer"}>
+      <footer className="d-flex flex-column pt-2 pb-2 footer container__div">
         <p className="mb-0 text-center"> { getAppVersionString() } </p>
         <small className="mb-0 text-center">All trademarks, logos and brand names are the property of their respective owners.</small>
       </footer>

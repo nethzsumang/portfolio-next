@@ -1,27 +1,13 @@
-import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
 import HistoryHeader from '../components/history/HistoryHeader';
 import Timeline from '../components/history/Timeline';
-import type { RootState } from '../store';
 
 /**
  * History component
  * @author Kenneth Sumang
  */
 export default function History() {
-  const appTheme = useSelector((state: RootState) => state.app.appTheme);
-  const [containerStyle, setContainerStyle] = useState('');
-
-  useEffect(() => {
-    if (appTheme === 'dark') {
-      setContainerStyle('history__container __full-height __dark-div');
-    } else {
-      setContainerStyle('history__container __full-height');
-    }
-  }, [appTheme]);
-
   return (
-    <div className={containerStyle}>
+    <div className="history__container __full-height container__div">
       <main>
         <HistoryHeader />
         <Timeline />
