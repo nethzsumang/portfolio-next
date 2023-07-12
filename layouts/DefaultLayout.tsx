@@ -22,8 +22,13 @@ export default function DefaultLayout ({ children }) {
     getAppVersion();
     if (window !== undefined) {
       if (appTheme === null) {
-        const storageAppTheme = window.localStorage.getItem('portfolio-app-theme') ?? 'light';
-        dispatch(changeAppTheme(storageAppTheme));
+        const storageAppTheme = window.localStorage.getItem('portfolio-app-theme');
+        const themeFromMediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const theme = (!storageAppTheme)
+          ? themeFromMediaQuery
+          : storageAppTheme;
+        document.documentElement.setAttribute('data-theme', theme);
+        dispatch(changeAppTheme(theme));
       }
 
       const lang = 'en';
@@ -85,17 +90,8 @@ export default function DefaultLayout ({ children }) {
   function onChangeThemeToggle(isDark) {
     const theme = isDark ? 'dark' : 'light';
     window.localStorage.setItem('portfolio-app-theme', theme);
+    document.documentElement.setAttribute('data-theme', theme);
     dispatch(changeAppTheme(theme));
-  }
-
-  /**
-   * Change language
-   * @param {string} langCode 
-   */
-  async function changeLanguageEvent(langCode) {
-    await i18n.changeLanguage(langCode);
-    window.localStorage.setItem('portfolio-lang', langCode);
-    dispatch(changeLang(langCode));
   }
 
   /**
@@ -116,7 +112,7 @@ export default function DefaultLayout ({ children }) {
   }
 
   return (
-    <div className={appTheme === 'dark' ? 'd-flex flex-column h-100 __dark-div' : 'd-flex flex-column h-100'}>
+    <div className='d-flex flex-column h-100 container__div'>
       <Navbar bg={appTheme} variant={appTheme} expand="lg" collapseOnSelect={true} >
         <Container>
           <Navbar.Brand href="#home">
@@ -188,7 +184,7 @@ export default function DefaultLayout ({ children }) {
       </Navbar>
       <main>{children}</main>
 
-      <footer className={appTheme === 'dark' ? "d-flex flex-column pt-2 pb-2 footer __dark-div" : "d-flex flex-column pt-2 pb-2 footer"}>
+      <footer className="d-flex flex-column pt-2 pb-2 footer container__div">
         <p className="mb-0 text-center"> { getAppVersionString() } </p>
         <small className="mb-0 text-center">All trademarks, logos and brand names are the property of their respective owners.</small>
       </footer>

@@ -39,7 +39,7 @@ export default function ArticlesSection () {
           onClick={() => handleArticleCardClick(1)}
         >
           <Card.Img variant="top" src="https://miro.medium.com/max/1400/0*l4mKJPK2gq9n9e-q" />
-          <Card.Body className={appTheme === 'dark' ? '__dark-div' : ''}>
+          <Card.Body className="container__div">
             <Card.Title>Hidden Gems in Eloquent ORM — Laravel 7.x</Card.Title>
             <Card.Text>
               Many of us use Eloquent when programming with Laravel. But believe it or not, 
@@ -53,7 +53,7 @@ export default function ArticlesSection () {
           onClick={() => handleArticleCardClick(2)}
         >
           <Card.Img variant="top" src="https://miro.medium.com/max/1400/0*H8QHKGRNHPUINiu4" />
-          <Card.Body className={appTheme === 'dark' ? '__dark-div' : ''}>
+          <Card.Body className="container__div">
             <Card.Title>Understanding Digital Image Processing</Card.Title>
             <Card.Text>
             You suddenly want to know how your smartphone or computer represent images you took. 
@@ -67,7 +67,7 @@ export default function ArticlesSection () {
           onClick={() => handleArticleCardClick(3)}
         >
           <Card.Img variant="top" src="https://miro.medium.com/max/1400/1*lovxQO12mwBmO3mhK2QeIg.jpeg" />
-          <Card.Body className={appTheme === 'dark' ? '__dark-div' : ''}>
+          <Card.Body className="container__div">
             <Card.Title>Introducing SAPUI5 Helper</Card.Title>
             <Card.Text>
             In the middle of it, you thought, “Is there something I can use to create all these boilerplate codes easily?”

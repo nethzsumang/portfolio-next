@@ -1,7 +1,4 @@
 import { ListGroup } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
-import type { RootState } from '../../store';
 
 /**
  * CertificateInfo structure
@@ -19,10 +16,6 @@ interface CertificateInfo {
  * @since  2023.03.23
  */
 export default function CertificatesContainer() {
-  const appTheme = useSelector((state: RootState) => state.app.appTheme);
-  const [containerStyle, setContainerStyle] = useState('');
-  const [certificateDateStyle, setCertificateDateStyle] = useState('');
-
   const certificates: CertificateInfo[] = [
     {
       name: 'Learning Next.js',
@@ -72,17 +65,7 @@ export default function CertificatesContainer() {
       issuer: 'HarvardX',
       issuedAt: 'June 2020',
     },
-  ]
-
-  useEffect(() => {
-    if (appTheme === 'dark') {
-      setContainerStyle('d-flex align-items-start flex-column __no-left-padding __dark-div');
-      setCertificateDateStyle('certificates__certificate-date-dark');
-    } else {
-      setContainerStyle('d-flex align-items-start flex-column __no-left-padding');
-      setCertificateDateStyle('certificates__certificate-date-light');
-    }
-  }, [appTheme]);
+  ];
 
   return (
     <>
@@ -93,7 +76,7 @@ export default function CertificatesContainer() {
             return (
               <ListGroup.Item
                 key={certificate.name}
-                className={containerStyle}
+                className="d-flex align-items-start flex-column __no-left-padding container__div"
                 action
                 onClick={ () => window.open(certificate.url, '_blank') }
               >
@@ -103,7 +86,7 @@ export default function CertificatesContainer() {
                   </div>
                 </div>
                 <div className="mt-1">{certificate.issuer}</div>
-                <small className={certificateDateStyle}>Issued {certificate.issuedAt}</small>
+                <small className="certificates__certificate-date">Issued {certificate.issuedAt}</small>
               </ListGroup.Item>
             );
           })

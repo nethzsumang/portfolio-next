@@ -18,7 +18,6 @@ export default function Timeline() {
   const [timeLineContainerColor, setTimelineContainerColor] = useState('rgb(33, 150, 243)');
   const [timelineFontColor, setTimelineFontColor] = useState('#cccccc');
   const [timelineIconContainerColor, setTimelineIconContainerColor] = useState('#3498db');
-  const [showMoreContentClass, setShowMoreContentClass] = useState('show-more-content-container-light');
 
   useEffect(() => {
     if (appTheme === 'dark') {
@@ -26,13 +25,11 @@ export default function Timeline() {
       setTimelineFontColor('#cccccc');
       setTimelineContainerColor('#000');
       setTimelineIconContainerColor('#000');
-      setShowMoreContentClass('show-more-content-container-dark');
     } else {
       setTimelineLineColor('#000');
       setTimelineFontColor('#000');
       setTimelineContainerColor('#dee4e7');
       setTimelineIconContainerColor('#B3E5FC');
-      setShowMoreContentClass('show-more-content-container-light');
     }
   }, [appTheme]);
 
@@ -82,7 +79,7 @@ export default function Timeline() {
           <div className="show-more-container">
             <ShowMore
               maxHeight={150}
-              className={showMoreContentClass}
+              className="show-more-content-container"
               classNameButtonDiv="show-more-button-div"
               button={
                 <span className="show-more-button">
