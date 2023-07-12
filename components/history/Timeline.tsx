@@ -120,7 +120,7 @@ export default function Timeline() {
             <LanguageBadge content="Zend" />
             <LanguageBadge content="jQuery" />
           </div>
-          <p>
+          <p style={{ fontWeight: '400 !important' }}>
           { t('HISTORY.HISTORY_1_1') }
           </p>
         </VerticalTimelineElement>
