@@ -16,7 +16,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         version: '1.13.1',
         since: '2023-07-26 22:00:00 UTC+0800',
         changes: [
-          'Optimized loading of some components.'
+          'Optimized loading of some components.',
+          'Merged pull request from dependabot.'
         ]
       },
       {
