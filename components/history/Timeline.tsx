@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import { useTranslation } from 'react-i18next';
@@ -11,27 +11,20 @@ import type { RootState } from '../../store';
  * @author Kenneth Sumang
  */
 export default function Timeline() {
-  const appTheme = useSelector((state: RootState) => state.app.appTheme);
+  const timelineLineColor = useSelector((state: RootState) => {
+    return (state.app.appTheme === 'dark') ? '#cccccc' : '#000';
+  });
+  const timelineFontColor = useSelector((state: RootState) => {
+    return (state.app.appTheme === 'dark') ? '#cccccc' : '#000';
+  });
+  const timeLineContainerColor = useSelector((state: RootState) => {
+    return (state.app.appTheme === 'dark') ? '#000' : '#dee4e7';
+  });
+  const timelineIconContainerColor = useSelector((state: RootState) => {
+    return (state.app.appTheme === 'dark') ? '#000' : '#B3E5FC';
+  });
   const { t } = useTranslation();
   const [showMoreText, setShowMoreText] = useState('Show More');
-  const [timelineLineColor, setTimelineLineColor] = useState('#cccccc');
-  const [timeLineContainerColor, setTimelineContainerColor] = useState('rgb(33, 150, 243)');
-  const [timelineFontColor, setTimelineFontColor] = useState('#cccccc');
-  const [timelineIconContainerColor, setTimelineIconContainerColor] = useState('#3498db');
-
-  useEffect(() => {
-    if (appTheme === 'dark') {
-      setTimelineLineColor('#cccccc');
-      setTimelineFontColor('#cccccc');
-      setTimelineContainerColor('#000');
-      setTimelineIconContainerColor('#000');
-    } else {
-      setTimelineLineColor('#000');
-      setTimelineFontColor('#000');
-      setTimelineContainerColor('#dee4e7');
-      setTimelineIconContainerColor('#B3E5FC');
-    }
-  }, [appTheme]);
 
   /**
    * Handler when show more button is clicked

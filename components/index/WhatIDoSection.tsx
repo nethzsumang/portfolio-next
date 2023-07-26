@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import TechnicalSkillCard from './technical-skills/TechnicalSkillCard';
 import { useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
 import type { RootState } from '../../store';
 
 /**
@@ -10,14 +9,8 @@ import type { RootState } from '../../store';
  */
 export default function WhatIDoSection () {
   const { t } = useTranslation();
-  const appTheme = useSelector((state: RootState) => state.app.appTheme);
-  const [jiraLogoUrl, setJiraLogoUrl] = useState('/images/jira-icon-light.png');
-  const [confluenceLogoUrl, setConfluenceLogoUrl] = useState('/images/confluence-icon-light.png');
-
-  useEffect(() => {
-    setJiraLogoUrl(`/images/jira-icon-${appTheme}.png`);
-    setConfluenceLogoUrl(`/images/confluence-icon-${appTheme}.png`);
-  }, [appTheme]);
+  const jiraLogoUrl = useSelector((state: RootState) => `/images/jira-icon-${state.app.appTheme}.png`);
+  const confluenceLogoUrl = useSelector((state: RootState) => `/images/confluence-icon-${state.app.appTheme}.png`);
 
   return (
     <div className="what-i-do__container">
