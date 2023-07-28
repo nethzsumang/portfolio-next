@@ -1,6 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LangLibrary from '../libraries/LangLibrary';
+import LangLibrary from '../libraries/lang.library';
 
 i18n
   .use(initReactI18next)
