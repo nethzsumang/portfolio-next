@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import { VerticalTimeline }  from 'react-vertical-timeline-component';
 import { useTranslation } from 'react-i18next';
-import ShowMore from 'react-show-more-button';
-import LanguageBadge from '../projects/LanguageBadge';
 import type { RootState } from '../../store';
+import TimelineRecord from './TimelineRecord';
 
 /**
  * Timeline component
@@ -24,19 +22,6 @@ export default function Timeline() {
     return (state.app.appTheme === 'dark') ? '#000' : '#B3E5FC';
   });
   const { t } = useTranslation();
-  const [showMoreText, setShowMoreText] = useState('Show More');
-
-  /**
-   * Handler when show more button is clicked
-   * @param {boolean} state 
-   */
-  function onShowMoreStateChange(state) {
-    if (state === false) {
-      setShowMoreText('Show Less');
-    } else {
-      setShowMoreText('Show More');
-    }
-  }
 
   return (
     <div className="history__timeline-container">
@@ -45,112 +30,69 @@ export default function Timeline() {
         animate={false}
         lineColor={timelineLineColor}
       >
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+        <TimelineRecord
+          timeLineContainerColor={timeLineContainerColor}
+          timelineFontColor={timelineFontColor}
+          timelineIconContainerColor={timelineIconContainerColor}
           position="right"
-          contentStyle={{ 
-            background: timeLineContainerColor,
-            color: timelineFontColor,
-            borderRadius: '20px' 
-          }}
-          contentArrowStyle={{ borderRight: '7px solid  ' + timeLineContainerColor }}
           date="2018 - 2023"
-          iconStyle={{ background: timelineIconContainerColor, color: timelineFontColor }}
           icon={<i className="bi bi-briefcase timeline-icon"></i>}
+          title="Cafe24 Philippines Inc."
+          subtitle="Senior Web Developer"
+          hasShowMore={true}
         >
-          <h4 className="vertical-timeline-element-title">Cafe24 Philippines Inc.</h4>
-          <h6 className="vertical-timeline-element-subtitle">Senior Web Developer</h6>
-          <div className="timeline__badge-container">
-            <LanguageBadge content='Node' />
-            <LanguageBadge content='Typescript' />
-            <LanguageBadge content="PHP" />
-            <LanguageBadge content="Laravel" />
-            <LanguageBadge content="JavaScript" />
-            <LanguageBadge content="React" />
-            <LanguageBadge content="Vue" />
-          </div>
-          <div className="show-more-container">
-            <ShowMore
-              maxHeight={150}
-              className="show-more-content-container"
-              classNameButtonDiv="show-more-button-div"
-              button={
-                <span className="show-more-button">
-                  <u><a>{ showMoreText }</a></u>
-                </span>
-              }
-              onChange={onShowMoreStateChange}
-            >
-              <ul>
-                <li>{ t('HISTORY.HISTORY_2_6') }</li>
-                <li>{ t('HISTORY.HISTORY_2_5') }</li>
-                <li>{ t('HISTORY.HISTORY_2_4') }</li>
-                <li>{ t('HISTORY.HISTORY_2_3') }</li>
-                <li>{ t('HISTORY.HISTORY_2_2') }</li>
-                <li>{ t('HISTORY.HISTORY_2_1') }</li>
-              </ul>
-            </ShowMore>
-          </div>
-        </VerticalTimelineElement>
+          <ul>
+            <li>{ t('HISTORY.HISTORY_2_6') }</li>
+            <li>{ t('HISTORY.HISTORY_2_5') }</li>
+            <li>{ t('HISTORY.HISTORY_2_4') }</li>
+            <li>{ t('HISTORY.HISTORY_2_3') }</li>
+            <li>{ t('HISTORY.HISTORY_2_2') }</li>
+            <li>{ t('HISTORY.HISTORY_2_1') }</li>
+          </ul>
+        </TimelineRecord>
 
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+        <TimelineRecord
+          timeLineContainerColor={timeLineContainerColor}
+          timelineFontColor={timelineFontColor}
+          timelineIconContainerColor={timelineIconContainerColor}
           position="left"
-          contentStyle={{ 
-            background: timeLineContainerColor,
-            color: timelineFontColor,
-            borderRadius: '20px' 
-          }}
-          contentArrowStyle={{ borderRight: '7px solid  ' + timeLineContainerColor }}
           date="2017"
-          iconStyle={{ background: timelineIconContainerColor, color: timelineFontColor }}
           icon={<i className="bi bi-briefcase timeline-icon"></i>}
+          title="Curo Teknika Inc."
+          subtitle="Application Developer Intern"
+          hasShowMore={false}
+          languages={['PHP', 'Zend', 'jQuery']}
         >
-          <h4 className="vertical-timeline-element-title">Curo Teknika Inc.</h4>
-          <h6 className="vertical-timeline-element-subtitle">Application Developer Intern</h6>
-          <div className="timeline__badge-container">
-            <LanguageBadge content="PHP" />
-            <LanguageBadge content="Zend" />
-            <LanguageBadge content="jQuery" />
-          </div>
           <p style={{ fontWeight: '400 !important' }}>
-          { t('HISTORY.HISTORY_1_1') }
+            { t('HISTORY.HISTORY_1_1') }
           </p>
-        </VerticalTimelineElement>
+        </TimelineRecord>
 
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+        <TimelineRecord
+          timeLineContainerColor={timeLineContainerColor}
+          timelineFontColor={timelineFontColor}
+          timelineIconContainerColor={timelineIconContainerColor}
           position="right"
-          contentStyle={{ 
-            background: timeLineContainerColor,
-            color: timelineFontColor,
-            borderRadius: '20px' 
-          }}
-          contentArrowStyle={{ borderRight: '7px solid  ' + timeLineContainerColor }}
           date="2014 - 2018"
-          iconStyle={{ background: timelineIconContainerColor, color: timelineFontColor }}
           icon={<i className="bi bi-mortarboard timeline-icon"></i>}
+          title="Polytechnic University of the Philippines"
+          subtitle="Bachelor of Science in Computer Science"
+          hasShowMore={false}
         >
-          <h4 className="vertical-timeline-element-title">Polytechnic University of the Philippines</h4>
-          <h6 className="vertical-timeline-element-subtitle">Bachelor of Science in Computer Science</h6>
-        </VerticalTimelineElement>
+        </TimelineRecord>
 
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+        <TimelineRecord
+          timeLineContainerColor={timeLineContainerColor}
+          timelineFontColor={timelineFontColor}
+          timelineIconContainerColor={timelineIconContainerColor}
           position="left"
-          contentStyle={{ 
-            background: timeLineContainerColor,
-            color: timelineFontColor,
-            borderRadius: '20px' 
-          }}
-          contentArrowStyle={{ borderRight: '7px solid  ' + timeLineContainerColor }}
-          date="2010 - 2014"
-          iconStyle={{ background: timelineIconContainerColor, color: timelineFontColor }}
+          date="2014 - 2018"
           icon={<i className="bi bi-mortarboard timeline-icon"></i>}
+          title="Pasig City Science High School"
+          subtitle="High School"
+          hasShowMore={false}
         >
-          <h4 className="vertical-timeline-element-title">Pasig City Science High School</h4>
-          <h6 className="vertical-timeline-element-subtitle">High School</h6>
-        </VerticalTimelineElement>
+        </TimelineRecord>
       </VerticalTimeline>
     </div>
   );
