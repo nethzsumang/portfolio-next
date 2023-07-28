@@ -17,6 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         since: '2023-07-28 11:00:00 UTC+0800',
         changes: [
           'Optimized handling of contact form.',
+          'Refactored code for Timeline component.',
         ]
       },
       {
