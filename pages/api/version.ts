@@ -7,11 +7,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
  */
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
-    version: '1.13.1',
-    since: '2023-07-26 22:00:00 UTC+0800',
+    version: '1.13.2',
+    since: '2023-07-28 11:00:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.13.2',
+        since: '2023-07-28 11:00:00 UTC+0800',
+        changes: [
+          'Optimized handling of contact form.',
+        ]
+      },
       {
         version: '1.13.1',
         since: '2023-07-26 22:00:00 UTC+0800',
