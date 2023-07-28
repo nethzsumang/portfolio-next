@@ -40,6 +40,7 @@ export default function Timeline() {
           title="Cafe24 Philippines Inc."
           subtitle="Senior Web Developer"
           hasShowMore={true}
+          languages={['Node', 'Typescript', 'PHP', 'Laravel', 'Javascript', 'React', 'Vue']}
         >
           <ul>
             <li>{ t('HISTORY.HISTORY_2_6') }</li>
