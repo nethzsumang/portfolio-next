@@ -51,7 +51,7 @@ export default function TimelineRecord(props: TimelineRecordProps) {
       contentArrowStyle={{ borderRight: '7px solid  ' + props.timeLineContainerColor }}
       date={props.date}
       iconStyle={{ background: props.timelineIconContainerColor, color: props.timelineFontColor }}
-      icon={<i className="bi bi-briefcase timeline-icon"></i>}
+      icon={props.icon}
     >
       <h4 className="vertical-timeline-element-title">{ props.title }</h4>
       <h6 className="vertical-timeline-element-subtitle">{ props.subtitle }</h6>
