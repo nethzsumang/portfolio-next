@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import Col from 'react-bootstrap/Col';
@@ -9,7 +9,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import ReachOutContainer from './ReachOutContainer';
 import HorizontalRuleWithText from './HorizontalRuleWithText';
 import type { RootState } from '../../store';
-import * as EmailValidator from 'email-validator';
+import ContactService, { ContactEmailFormData } from '../../services/contact.service';
 
 /**
  * Contact Me Container page
@@ -19,71 +19,39 @@ import * as EmailValidator from 'email-validator';
 export default function ContactMeContainer() {
   const { t } = useTranslation();
   const appTheme = useSelector((state: RootState) => state.app.appTheme);
-  const [ name, setName ] = useState('');
-  const [ email, setEmail ] = useState('');
-  const [ subject, setSubject ] = useState('');
-  const [ content, setContent ] = useState('');
-  const [ recaptchaValue, setRecaptchaValue ] = useState(false);
+  const nameInputRef = useRef(null);
+  const emailInputRef = useRef(null);
+  const subjectInputRef = useRef(null);
+  const contentInputRef = useRef(null);
+  const recaptchaRef = useRef(null);
   const [ isProcessing, setIsProcessing ] = useState(false);
-  let recaptchaRef;
-
-  /**
-   * Sets ref for recaptcha
-   * @param ref
-   */
-  function setRecaptchaRef(ref) {
-    if (ref) {
-      recaptchaRef = ref;
-    }
-  }
 
   /**
    * Handles contact form submission
    */
   async function handleContactFormSubmit() {
     setIsProcessing(true);
-    if (recaptchaValue !== true) {
-      alert('Please check the captcha checkbox.');
-      setIsProcessing(false);
-      return;
-    }
-
-    const verifyTokenResponse = await verifyRecaptcha();
-    if (verifyTokenResponse === false) {
-      alert('Verification failed. Please try again.');
-      setIsProcessing(false);
-      return;
-    }
-
-    if (name.length === 0 || email.length === 0 || subject.length === 0 || content.length === 0) {
-      alert('You are missing some of the form\'s data. Please check your submission and try again.');
-      setIsProcessing(false);
-      return;
-    }
-
-    if (!EmailValidator.validate(email)) {
-      alert('You have entered an invalid email address. Please check your submission and try again.');
-      setIsProcessing(false);
-      return;
-    }
-
     const formData = {
-      name: name,
-      email: email,
-      subject: subject,
-      content: content
+      name: nameInputRef.current.value,
+      email: emailInputRef.current.value,
+      subject: subjectInputRef.current.value,
+      content: contentInputRef.current.value,
     };
 
-    const response = await fetch('/api/sendmail', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      },
-      body: JSON.stringify(formData),
+    const contactService = new ContactService();
+    const validationResult = await contactService.validateContactFormData({
+      ...formData,
+      recaptcha: recaptchaRef.current.getValue(),
     });
+    if (!validationResult.valid) {
+      alert(validationResult.message + ' (' + validationResult.source.join(', ') + ')');
+      setIsProcessing(false);
+      return;
+    }
 
-    if (response.ok === false) {
+
+    const validResponse = await contactService.sendContactEmail(formData as ContactEmailFormData);
+    if (!validResponse) {
       alert('Form submission failed.');
       setIsProcessing(false);
       return;
@@ -91,25 +59,19 @@ export default function ContactMeContainer() {
 
     alert('Successfully submitted. Expect a reply to the email that you provided.');
     // reset form
-    setName('');
-    setEmail('');
-    setSubject('');
-    setContent('');
-    recaptchaRef.reset();
+    resetForm();
     setIsProcessing(false);
   }
 
   /**
-   * Verify recaptcha
-   * @returns {Promise<boolean>}
+   * Resets the form
    */
-  async function verifyRecaptcha() {
-    const token = recaptchaRef.getValue();
-    const response = await fetch('/api/verify-captcha', {
-      method: 'POST',
-      body: JSON.stringify({ token: token })
-    });
-    return response.ok;
+  function resetForm() {
+    nameInputRef.current.value = '';
+    emailInputRef.current.value = '';
+    subjectInputRef.current.value = '';
+    contentInputRef.current.value = '';
+    recaptchaRef.current.reset();
   }
 
   return (
@@ -128,16 +90,14 @@ export default function ContactMeContainer() {
                 <Form.Control
                   type="text"
                   placeholder="Name"
-                  value={name}
-                  onChange={ (e) => setName(e.target.value) }
+                  ref={nameInputRef}
                 />
               </Col>
               <Col>
                 <Form.Control
                   type="email"
                   placeholder="Email Address"
-                  value={email}
-                  onChange={ (e) => setEmail(e.target.value) }
+                  ref={emailInputRef}
                 />
               </Col>
             </Row>
@@ -147,8 +107,7 @@ export default function ContactMeContainer() {
                 <Form.Control
                   type="text"
                   placeholder="Subject"
-                  value={subject}
-                  onChange={ (e) => setSubject(e.target.value) }
+                  ref={subjectInputRef}
                 />
               </Col>
             </Row>
@@ -159,8 +118,7 @@ export default function ContactMeContainer() {
                   as="textarea"
                   placeholder="Content"
                   style={{ height: '150px' }}
-                  value={content}
-                  onChange={ (e) => setContent(e.target.value) }
+                  ref={contentInputRef}
                 />
               </Col>
             </Row>
@@ -169,10 +127,9 @@ export default function ContactMeContainer() {
           <Row className="mb-3">
             <Col>
               <ReCAPTCHA
-                ref={(ref) => setRecaptchaRef(ref)}
+                ref={recaptchaRef}
                 size="normal"
                 sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                onChange={ () => setRecaptchaValue(true) }
                 theme={appTheme}
                 key={appTheme}
               />
