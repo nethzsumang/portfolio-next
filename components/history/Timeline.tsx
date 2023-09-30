@@ -34,6 +34,25 @@ export default function Timeline() {
           timeLineContainerColor={timeLineContainerColor}
           timelineFontColor={timelineFontColor}
           timelineIconContainerColor={timelineIconContainerColor}
+          position="left"
+          date="2023 - Present"
+          icon={<i className="bi bi-briefcase timeline-icon"></i>}
+          title="Accenture Inc."
+          subtitle="Advanced App Engineering Sr. Analyst"
+          hasShowMore={false}
+          languages={['React', 'Tailwind']}
+        >
+          <ul>
+            <li>Review functional specifications and create technical specifications out of it.</li>
+            <li>Design, develop, and implement React front-end components.</li>
+            <li>Utilize CSS and other CSS frameworks, such as Tailwind, in building user-friendly user interface.</li>
+          </ul>
+        </TimelineRecord>
+
+        <TimelineRecord
+          timeLineContainerColor={timeLineContainerColor}
+          timelineFontColor={timelineFontColor}
+          timelineIconContainerColor={timelineIconContainerColor}
           position="right"
           date="2018 - 2023"
           icon={<i className="bi bi-briefcase timeline-icon"></i>}
