@@ -7,11 +7,20 @@ import type { NextApiRequest, NextApiResponse } from 'next';
  */
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
-    version: '1.14.0',
-    since: '2023-09-30 16:30:00 UTC+0800',
+    version: '1.15.0',
+    since: '2023-10-18 17:30:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.15.0',
+        since: '2023-10-18 17:30:00 UTC+0800',
+        changes: [
+          'Fix year in High School record in History.',
+          'Add NextJS and Jest in technologies used in Accenture.',
+          'Add unit test responsibility in Accenture.',
+        ]
+      },
       {
         version: '1.14.0',
         since: '2023-09-30 16:30:00 UTC+0800',
