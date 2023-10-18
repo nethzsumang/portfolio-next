@@ -106,7 +106,7 @@ export default function Timeline() {
           timelineFontColor={timelineFontColor}
           timelineIconContainerColor={timelineIconContainerColor}
           position="left"
-          date="2014 - 2018"
+          date="2010 - 2014"
           icon={<i className="bi bi-mortarboard timeline-icon"></i>}
           title="Pasig City Science High School"
           subtitle="High School"
