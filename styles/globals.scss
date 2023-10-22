@@ -120,17 +120,23 @@ a {
     cursor: pointer !important;
   }
 
-  .show-more-content-container-dark {
-    background: #000 !important;
-    color: rgb(204, 204, 204) !important;
-    margin-top: 1rem !important;
-  }
-
-  .show-more-content-container-light {
+  .show-more-content-container {
     background: #dee4e7 !important;
     color: #000 !important;
     margin-top: 1rem !important;
   }
+
+  //.show-more-content-container-dark {
+  //  background: #000 !important;
+  //  color: rgb(204, 204, 204) !important;
+  //  margin-top: 1rem !important;
+  //}
+  //
+  //.show-more-content-container-light {
+  //  background: #dee4e7 !important;
+  //  color: #000 !important;
+  //  margin-top: 1rem !important;
+  //}
 
   .show-more-button-div {
     padding: 0 !important;
