@@ -7,11 +7,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
  */
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
-    version: '1.15.0',
-    since: '2023-10-18 17:30:00 UTC+0800',
+    version: '1.15.1',
+    since: '2023-10-22 12:00:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.15.1',
+        since: '2023-10-22 12:00:00 UTC+0800',
+        changes: [
+          'Remove dark mode.',
+          'Update browserlist.',
+        ]
+      },
       {
         version: '1.15.0',
         since: '2023-10-18 17:30:00 UTC+0800',
