@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/router';
-import DarkModeToggle from 'react-dark-mode-toggle';
 import { changeAppTheme } from '../store/slices/appSlice';
 import type { RootState } from '../store';
 
@@ -55,17 +54,7 @@ export default function DefaultLayout ({ children }) {
 
   useEffect(() => {
     getAppVersion();
-    if (window !== undefined) {
-      if (appTheme === null) {
-        const storageAppTheme = window.localStorage.getItem('portfolio-app-theme');
-        const themeFromMediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        const theme = (!storageAppTheme)
-          ? themeFromMediaQuery
-          : storageAppTheme;
-        document.documentElement.setAttribute('data-theme', theme);
-        dispatch(changeAppTheme(theme));
-      }
-    }
+    dispatch(changeAppTheme('light'));
   }, []);
 
   useEffect(() => {
@@ -114,18 +103,6 @@ export default function DefaultLayout ({ children }) {
   }
 
   /**
-   * On change handler for dark mode
-   * @param {boolean} isDark
-   * @return {void}
-   */
-  function onChangeThemeToggle(isDark) {
-    const theme = isDark ? 'dark' : 'light';
-    window.localStorage.setItem('portfolio-app-theme', theme);
-    document.documentElement.setAttribute('data-theme', theme);
-    dispatch(changeAppTheme(theme));
-  }
-
-  /**
    * Checks if nav is active
    * @param {string} navPath 
    * @returns 
@@ -168,14 +145,6 @@ export default function DefaultLayout ({ children }) {
                   );
                 })
               }
-            </Nav>
-
-            <Nav className="__dark-mode-toggle-nav">
-              <DarkModeToggle
-                onChange={onChangeThemeToggle}
-                checked={appTheme === 'dark'}
-                size={70}
-              />
             </Nav>
           </Navbar.Collapse>
         </Container>
