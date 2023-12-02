@@ -40,10 +40,11 @@ export default function Timeline() {
           title="Accenture Inc."
           subtitle="Advanced App Engineering Sr. Analyst"
           hasShowMore={false}
-          languages={['NextJS', 'React', 'Jest', 'Tailwind']}
+          languages={['NextJS', 'Express', 'React', 'Jest', 'Tailwind']}
         >
           <ul>
             <li>Review functional specifications and create technical specifications out of it.</li>
+            <li>Implement and customize third-party libraries for diagramming and rich-text editing.</li>
             <li>Design, develop, and implement React front-end components.</li>
             <li>Utilize CSS and other CSS frameworks, such as Tailwind, in building user-friendly user interface.</li>
             <li>Create unit tests for the service layer in the application.</li>

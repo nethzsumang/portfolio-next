@@ -7,11 +7,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
  */
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
-    version: '1.15.3',
-    since: '2023-10-22 12:02:00 UTC+0800',
+    version: '1.16.0',
+    since: '2023-12-02 12:00:00 UTC+0800',
     author: 'Kenneth Sumang',
     email: 'work@kennethsumang.com',
     changelog: [
+      {
+        version: '1.16.0',
+        since: '2023-12-02 12:00:00 UTC+0800',
+        changes: [
+          'Update resume.',
+          'Add entry description and language in history.'
+        ]
+      },
       {
         version: '1.15.3',
         since: '2023-10-22 12:02:00 UTC+0800',
